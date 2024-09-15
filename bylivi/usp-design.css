@@ -1,0 +1,10 @@
+.checkmarks_container.desktop-checkmarks.desktop-checkmarks {
+	padding: 2px 10px;
+	background: #f5f5f5;
+	border-radius: 4px;
+	margin-top: 6px;
+}
+
+.checkmarks_container.desktop-checkmarks.desktop-checkmarks p {
+	text-transform: uppercase;
+}
