@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<style>
+			.clearance-hero {
+				background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+					url(https://i.ibb.co/bH7qv2R/8.jpg);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 100%;
+				color: white;
+			}
+			.clearance-hero__items {
+				display: flex;
+				align-items: center;
+				text-align: center;
+				padding: 60px;
+				padding-top: 120px;
+				padding-bottom: 130px;
+			}
+			.clearance-hero__item {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				flex: 1;
+			}
+			.clearance-hero__item:first-child {
+				border-right: 2px solid;
+			}
+
+			.clearance-hero__item .title {
+				font-size: 60px;
+				line-height: 60px;
+				font-weight: bold;
+				margin: 0;
+			}
+			.clearance-hero__item .info {
+				font-size: 20px;
+				font-weight: 500;
+				margin: auto;
+				margin-top: 40px;
+				margin-bottom: 60px;
+				padding-left: 10px;
+				padding-right: 10px;
+				max-width: 400px;
+			}
+
+			.clearance-hero__item .action-buttons a {
+				border: 3px solid #dfdfdf;
+				display: inline-block;
+				color: white;
+				padding: 12px 60px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 16px;
+			}
+			.clearance-hero__item .action-buttons a:last-child {
+				margin-left: 20px;
+			}
+			.clearance-deals .subcats-list-item__links {
+				margin: 10px 0;
+			}
+			.clearance-deals {
+				margin: 60px 0;
+			}
+			.clearance-deals .subcats-list-item-img {
+				padding: 10px;
+				box-sizing: border-box;
+			}
+			.clearance-deals .subcats-list-item__links a {
+				color: #fe8b2c;
+				text-decoration: none;
+				text-align: center;
+				display: block;
+				font-weight: 600;
+			}
+			.clearance-deals .subcats-list-item__all {
+				color: black;
+				text-decoration: none;
+				font-weight: bold;
+				text-align: center;
+				display: block;
+				font-size: 14px;
+			}
+			.clearance-deals .subcats-list-item__all::after {
+				content: '\e608';
+				font-family: 'icons-blank-theme';
+				vertical-align: middle;
+				font-size: 18px;
+			}
+			@media only screen and (max-width: 950px) {
+				.clearance-hero__item:first-child {
+					border-right: none;
+					margin-bottom: 30px;
+				}
+				.clearance-hero__items {
+					flex-direction: column;
+					padding: 40px;
+					padding-bottom: 50px;
+				}
+			}
+			@media only screen and (max-width: 860px) {
+				.clearance-deals .subcats-list .subcats-list-item {
+					flex-basis: 50%;
+					max-width: 50%;
+				}
+			}
+			@media only screen and (max-width: 500px) {
+				.clearance-hero__item .title {
+					font-size: 40px;
+					line-height: 40px;
+					font-weight: bold;
+					margin: 0;
+				}
+				.clearance-hero__item .info {
+					font-size: 16px;
+					font-weight: 500;
+					margin-top: 20px;
+					margin-bottom: 30px;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				.clearance-hero__item .action-buttons a {
+					border: 1px solid;
+					display: block;
+					color: #dfdfdf;
+					padding: 10px 40px;
+					text-decoration: none;
+					font-weight: 500;
+				}
+				.clearance-hero__item .action-buttons a:last-child {
+					margin-left: 0px;
+				}
+				.clearance-hero__item .action-buttons a:first-child {
+					margin-bottom: 10px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clearance-hero">
+			<div class="clearance-hero__items">
+				<div class="clearance-hero__item">
+					<p class="title">
+						CLEARANCE <br>
+						GOLF CLUBS
+					</p>
+					<p class="info">Up to 60% off brands like TaylorMade, Titleist and Callaway.</p>
+					<div class="action-buttons">
+						<a href="#">Drivers</a>
+						<a href="#">Iron Sets</a>
+					</div>
+				</div>
+				<div class="clearance-hero__item">
+					<p class="title">
+						CLEARANCE <br>
+						SHOES
+					</p>
+					<p class="info">Save big on shoes from top brands like Nike, Adidas and FootJoy.</p>
+					<div class="action-buttons">
+						<a href="#">Mens's</a>
+						<a href="#">Women's</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearance-deals">
+			<div class="subcats-list">
+				<div class="subcats-list-item">
+					<a href="#" class="subcats-list-item-link">
+						<img src="https://www.carlsgolfland.com/media/catalog/category/Club_Drivers_2022_Cat.jpg" class="subcats-list-item-img">
+						<span class="subcats-list-item-title">
+							<span class="subcats-list-item-title-text">Golf Clubs</span>
+						</span>
+					</a>
+					<div class="subcats-list-item__links">
+						<a href="#">Drivers</a>
+						<a href="#">Fairway Woods</a>
+						<a href="#">Hybrids</a>
+						<a href="#">Iron Sets</a>
+						<a href="#">Putters</a>
+						<a href="#">Widges</a>
+					</div>
+					<a href="#" class="subcats-list-item__all">All Golf Club Deals </a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
