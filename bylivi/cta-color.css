@@ -1,0 +1,6 @@
+.ProductForm__AddToCart.Button--primary {
+	border-color: #fea760;
+}
+.ProductForm__AddToCart.Button--primary:before {
+	background: #fea760;
+}
