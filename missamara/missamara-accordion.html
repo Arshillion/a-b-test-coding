@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.acc-area-header {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10px;
+				color: #232323;
+			}
+
+			.acc-area-header img {
+				width: 34px;
+				margin-right: 6px;
+			}
+
+			.tab-acc-area {
+				border: 1px solid #d0d0d0;
+				width: 100%;
+				overflow: hidden;
+				margin-bottom: 30px;
+			}
+
+			.tab-acc-area * {
+				overflow: hidden;
+			}
+
+			.tab-acc-area .tab-acc-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background: #ebebeb;
+				padding: 16px 20px;
+				font-weight: 700;
+				font-size: 20px;
+				color: #505050;
+				cursor: pointer;
+				user-select: none;
+			}
+
+			.tab-acc-area .tab-acc-item .tab-acc-header {
+				margin-bottom: 4px;
+			}
+
+			.tab-acc-area .tab-acc-item:last-child .tab-acc-header {
+				margin-bottom: 0px;
+			}
+
+			.active .tab-acc-header {
+				color: #d88a1c;
+				background: #fff3e2;
+				margin-bottom: 0px !important;
+			}
+
+			.tab-acc-header .active-icon {
+				display: none;
+			}
+
+			.tab-acc-header .inactive-icon {
+				display: block;
+			}
+
+			.active .tab-acc-header .inactive-icon {
+				display: none;
+			}
+
+			.active .tab-acc-header .active-icon {
+				display: block;
+			}
+
+			.tab-acc-header_info {
+				display: flex;
+				align-items: center;
+			}
+
+			.tab-acc-header_info img {
+				margin-right: 10px;
+			}
+
+			.tab-acc-header_info .small-img {
+				width: 21px;
+			}
+
+			.tab-acc-info {
+				display: none;
+				align-items: center;
+				justify-content: space-between;
+				background: #fffcf8;
+			}
+
+			.active .tab-acc-info {
+				display: flex;
+			}
+
+			.tab-acc-info-details {
+				margin: 20px;
+				width: 70%;
+				order: 1;
+			}
+
+			.tab-acc-info-details p {
+				font-weight: 400;
+				font-size: 16px;
+				color: #616161;
+				margin: 0 0 10px 0;
+			}
+
+			.tab-acc-info-details p:last-child {
+				margin: 0 0 0 0;
+			}
+
+			.tab-acc-info img {
+				width: 30%;
+				order: 2;
+			}
+
+			@media only screen and (max-width: 767px) {
+				.active .tab-acc-info {
+					flex-direction: column-reverse;
+				}
+
+				.tab-acc-info-details {
+					width: 90%;
+				}
+
+				.tab-acc-info img {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="acc-area-header">
+			<img src="https://i.ibb.co/kQZMJnD/lovelike.png" alt="" />
+			<h3>Why you’ll love it</h3>
+		</div>
+		<div class="tab-acc-area">
+			<div class="tab-acc-item active">
+				<div class="tab-acc-header">
+					<div class="tab-acc-header_info">
+						<img
+							src="https://cdn.shopify.com/s/files/1/2594/4244/files/Handmade.svg?v=1640174276%22"
+							alt=""
+						/>
+						<span>Handmade</span>
+					</div>
+					<svg class="active-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M17 10L9 2L1 10" stroke="#FFB346" stroke-width="2"></path>
+					</svg>
+					<svg class="inactive-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M1 1L9 9L17 1" stroke="black" stroke-width="2"></path>
+					</svg>
+				</div>
+				<div class="tab-acc-info">
+					<div class="tab-acc-info-details">
+						<p>
+							These pieces are uniquely handcrafted by skilled artists who create through a labour
+							of love.
+						</p>
+						<p>The effort and energy that goes into each rug is genuinely magical.</p>
+						<p>From us to you, enjoy, and take care of this unique creation.</p>
+					</div>
+					<img src="https://i.ibb.co/gdgkCy7/handmade.png" alt="" />
+				</div>
+			</div>
+			<div class="tab-acc-item">
+				<div class="tab-acc-header">
+					<div class="tab-acc-header_info">
+						<img
+							src="https://cdn.shopify.com/s/files/1/2594/4244/files/NZ-Wool.svg?v=1640174276"
+							alt=""
+						/>
+						<span>Wool</span>
+					</div>
+					<svg class="active-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M17 10L9 2L1 10" stroke="#FFB346" stroke-width="2"></path>
+					</svg>
+					<svg class="inactive-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M1 1L9 9L17 1" stroke="black" stroke-width="2"></path>
+					</svg>
+				</div>
+				<div class="tab-acc-info">
+					<div class="tab-acc-info-details">
+						<p>
+							There is no pulling the wool over your eyes here. It’s well known why this material is
+							so popular.
+						</p>
+						<p>
+							Beautiful texture, high stain resistance and will last you a lifetime, the type of
+							investment that will always pay off.
+						</p>
+					</div>
+					<img src="https://i.ibb.co/27g8nBh/wool.png" alt="" />
+				</div>
+			</div>
+			<div class="tab-acc-item">
+				<div class="tab-acc-header">
+					<div class="tab-acc-header_info">
+						<img
+							class="small-img"
+							src="https://cdn.shopify.com/s/files/1/2594/4244/files/Medium_Traffic_03aa7fe3-baed-42d3-a251-34a668efb6e1_small.png?v=1671715083"
+							alt=""
+						/>
+						<span>Low Medium Traffic</span>
+					</div>
+					<svg class="active-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M17 10L9 2L1 10" stroke="#FFB346" stroke-width="2"></path>
+					</svg>
+					<svg class="inactive-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M1 1L9 9L17 1" stroke="black" stroke-width="2"></path>
+					</svg>
+				</div>
+				<div class="tab-acc-info">
+					<div class="tab-acc-info-details">
+						<p>
+							You deserve a bit of luxe and these gorgeous rugs are perfect for those areas with a
+							little less foot traffic.
+						</p>
+						<p>
+							Think primary bedrooms, sitting rooms and Pinterest-inspired home offices. It's a big
+							yes from us!
+						</p>
+					</div>
+					<img src="https://i.ibb.co/ydv2h0x/traffic.png" alt="" />
+				</div>
+			</div>
+			<div class="tab-acc-item">
+				<div class="tab-acc-header">
+					<div class="tab-acc-header_info">
+						<img
+							src="https://cdn.shopify.com/s/files/1/2594/4244/files/EcoFriendly.svg?v=1640174276"
+							alt=""
+						/>
+						<span>Eco Friendly</span>
+					</div>
+					<svg class="active-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M17 10L9 2L1 10" stroke="#FFB346" stroke-width="2"></path>
+					</svg>
+					<svg class="inactive-icon" width="18" height="11" viewBox="0 0 18 11" fill="none">
+						<path d="M1 1L9 9L17 1" stroke="black" stroke-width="2"></path>
+					</svg>
+				</div>
+				<div class="tab-acc-info">
+					<div class="tab-acc-info-details">
+						<p>You can enjoy this rug knowing you are doing something good for the planet!</p>
+						<p>
+							These rugs will not harm the environment during production, enjoyment or disposal.
+						</p>
+						<p>
+							If that wasn’t good enough, there are no synthetic chemicals, meaning they are safe
+							for your home and absolutely family-approved.
+						</p>
+					</div>
+					<img src="https://i.ibb.co/vk63CZZ/eco.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<script>
+			const removeActive = (items) => {
+				items.map((item) => {
+					item.classList.remove('active');
+				});
+			};
+
+			const accItem = [...document.querySelectorAll('.tab-acc-item')];
+			accItem.map((item, i) => {
+				const accItemHeader = item.querySelector('.tab-acc-header');
+				accItemHeader.addEventListener('click', () => {
+					removeActive([...accItem].filter((_, index) => i !== index));
+					if (item.classList.contains('active')) {
+						item.classList.remove('active');
+					} else {
+						item.classList.add('active');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
