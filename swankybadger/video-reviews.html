@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<style>
+			.rev-vid-area {
+				margin: 30px 10px;
+			}
+
+			.rev-vide-header {
+				color: #1c2436;
+				font-family: Inter;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 800;
+				width: 100%;
+				text-align: center;
+			}
+
+			.rev-vids {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 10px;
+			}
+
+			.rev-vid {
+				border-radius: 16px;
+				background: #eee;
+				display: flex;
+				padding: 12px;
+				flex-direction: column;
+				align-items: center;
+				gap: 12px;
+				flex: 1 0 0;
+			}
+
+			.rev-vid * {
+				margin: 0;
+				padding: 0;
+			}
+
+			.rev-img-area {
+				position: relative;
+			}
+
+			.play-rev-vid {
+				padding: 4px 12px 4px 8px;
+				border-radius: 27px;
+				color: #fff !important;
+				background: #000;
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				font-size: 14px;
+			}
+
+			.play-rev-vid svg {
+				width: 20px;
+			}
+
+			.rev-vid img {
+				width: 100%;
+				height: 100%;
+				border-radius: 8px;
+			}
+
+			.rev-vid p {
+				color: #1c2436;
+				text-align: center;
+				font-size: 18px;
+				line-height: 20px;
+				font-style: normal;
+				font-weight: 700;
+			}
+
+			.rev-vid span {
+				color: #1c2436;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+			}
+
+			.rev-vid > svg {
+				height: 30px;
+			}
+
+			@media only screen and (max-width: 991px) {
+				.rev-vids {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@media only screen and (max-width: 450px) {
+				.rev-vids {
+					grid-template-columns: repeat(1, 1fr);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container rev-vid-area">
+			<h3 class="rev-vide-header">what some users are saying</h3>
+			<div class="rev-vids">
+				<div class="rev-vid">
+					<div class="rev-img-area">
+						<img
+							src="https://cdn.stamped.io/uploads/photos/11079_6001546945_9d45e3db_ee35_4984_9253_4d2c90120eff.jpg"
+						/>
+						<a
+							href=""
+							class="play-rev-vid"
+						>
+							<svg
+								width="28"
+								height="28"
+								viewBox="0 0 28 28"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_100_150)">
+									<path
+										d="M14 27.6111C21.5172 27.6111 27.6111 21.5172 27.6111 14C27.6111 6.48282 21.5172 0.388916 14 0.388916C6.48282 0.388916 0.388916 6.48282 0.388916 14C0.388916 21.5172 6.48282 27.6111 14 27.6111Z"
+										fill="white"
+									></path>
+									<path
+										d="M21.4278 14L10.2926 20.1833V7.81665L21.4278 14Z"
+										fill="black"
+									></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_100_150">
+										<rect
+											width="28"
+											height="28"
+											fill="white"
+										></rect>
+									</clipPath>
+								</defs></svg
+							>Play the video
+						</a>
+					</div>
+					<svg
+						width="189"
+						height="36"
+						viewBox="0 0 189 36"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(0.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M18.5 4L21.6432 13.6738H31.8148L23.5858 19.6525L26.729 29.3262L18.5 23.3475L10.271 29.3262L13.4142 19.6525L5.18521 13.6738H15.3568L18.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(38.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M56.5 4L59.6432 13.6738H69.8148L61.5858 19.6525L64.729 29.3262L56.5 23.3475L48.271 29.3262L51.4142 19.6525L43.1852 13.6738H53.3568L56.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(76.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M94.5 4L97.6432 13.6738H107.815L99.5858 19.6525L102.729 29.3262L94.5 23.3475L86.271 29.3262L89.4142 19.6525L81.1852 13.6738H91.3568L94.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(114.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M132.5 4L135.643 13.6738H145.815L137.586 19.6525L140.729 29.3262L132.5 23.3475L124.271 29.3262L127.414 19.6525L119.185 13.6738H129.357L132.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(152.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M170.5 4L173.643 13.6738H183.815L175.586 19.6525L178.729 29.3262L170.5 23.3475L162.271 29.3262L165.414 19.6525L157.185 13.6738H167.357L170.5 4Z"
+							fill="white"
+						></path>
+					</svg>
+					<p>
+						We look back at some of Volvo's classics as Volvo's
+						announced that
+					</p>
+					<span>Elina Kl.</span>
+				</div>
+				<div class="rev-vid">
+					<div class="rev-img-area">
+						<img
+							src="https://cdn.stamped.io/uploads/photos/11079_6001546945_9d45e3db_ee35_4984_9253_4d2c90120eff.jpg"
+						/>
+						<a
+							href=""
+							class="play-rev-vid"
+						>
+							<svg
+								width="28"
+								height="28"
+								viewBox="0 0 28 28"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_100_150)">
+									<path
+										d="M14 27.6111C21.5172 27.6111 27.6111 21.5172 27.6111 14C27.6111 6.48282 21.5172 0.388916 14 0.388916C6.48282 0.388916 0.388916 6.48282 0.388916 14C0.388916 21.5172 6.48282 27.6111 14 27.6111Z"
+										fill="white"
+									></path>
+									<path
+										d="M21.4278 14L10.2926 20.1833V7.81665L21.4278 14Z"
+										fill="black"
+									></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_100_150">
+										<rect
+											width="28"
+											height="28"
+											fill="white"
+										></rect>
+									</clipPath>
+								</defs></svg
+							>Play the video
+						</a>
+					</div>
+					<svg
+						width="189"
+						height="36"
+						viewBox="0 0 189 36"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(0.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M18.5 4L21.6432 13.6738H31.8148L23.5858 19.6525L26.729 29.3262L18.5 23.3475L10.271 29.3262L13.4142 19.6525L5.18521 13.6738H15.3568L18.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(38.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M56.5 4L59.6432 13.6738H69.8148L61.5858 19.6525L64.729 29.3262L56.5 23.3475L48.271 29.3262L51.4142 19.6525L43.1852 13.6738H53.3568L56.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(76.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M94.5 4L97.6432 13.6738H107.815L99.5858 19.6525L102.729 29.3262L94.5 23.3475L86.271 29.3262L89.4142 19.6525L81.1852 13.6738H91.3568L94.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(114.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M132.5 4L135.643 13.6738H145.815L137.586 19.6525L140.729 29.3262L132.5 23.3475L124.271 29.3262L127.414 19.6525L119.185 13.6738H129.357L132.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(152.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M170.5 4L173.643 13.6738H183.815L175.586 19.6525L178.729 29.3262L170.5 23.3475L162.271 29.3262L165.414 19.6525L157.185 13.6738H167.357L170.5 4Z"
+							fill="white"
+						></path>
+					</svg>
+					<p>
+						We look back at some of Volvo's classics as Volvo's
+						announced that
+					</p>
+					<span>Elina Kl.</span>
+				</div>
+				<div class="rev-vid">
+					<div class="rev-img-area">
+						<img
+							src="https://cdn.stamped.io/uploads/photos/11079_6001546945_9d45e3db_ee35_4984_9253_4d2c90120eff.jpg"
+						/>
+						<a
+							href=""
+							class="play-rev-vid"
+						>
+							<svg
+								width="28"
+								height="28"
+								viewBox="0 0 28 28"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_100_150)">
+									<path
+										d="M14 27.6111C21.5172 27.6111 27.6111 21.5172 27.6111 14C27.6111 6.48282 21.5172 0.388916 14 0.388916C6.48282 0.388916 0.388916 6.48282 0.388916 14C0.388916 21.5172 6.48282 27.6111 14 27.6111Z"
+										fill="white"
+									></path>
+									<path
+										d="M21.4278 14L10.2926 20.1833V7.81665L21.4278 14Z"
+										fill="black"
+									></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_100_150">
+										<rect
+											width="28"
+											height="28"
+											fill="white"
+										></rect>
+									</clipPath>
+								</defs></svg
+							>Play the video
+						</a>
+					</div>
+					<svg
+						width="189"
+						height="36"
+						viewBox="0 0 189 36"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(0.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M18.5 4L21.6432 13.6738H31.8148L23.5858 19.6525L26.729 29.3262L18.5 23.3475L10.271 29.3262L13.4142 19.6525L5.18521 13.6738H15.3568L18.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(38.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M56.5 4L59.6432 13.6738H69.8148L61.5858 19.6525L64.729 29.3262L56.5 23.3475L48.271 29.3262L51.4142 19.6525L43.1852 13.6738H53.3568L56.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(76.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M94.5 4L97.6432 13.6738H107.815L99.5858 19.6525L102.729 29.3262L94.5 23.3475L86.271 29.3262L89.4142 19.6525L81.1852 13.6738H91.3568L94.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(114.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M132.5 4L135.643 13.6738H145.815L137.586 19.6525L140.729 29.3262L132.5 23.3475L124.271 29.3262L127.414 19.6525L119.185 13.6738H129.357L132.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(152.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M170.5 4L173.643 13.6738H183.815L175.586 19.6525L178.729 29.3262L170.5 23.3475L162.271 29.3262L165.414 19.6525L157.185 13.6738H167.357L170.5 4Z"
+							fill="white"
+						></path>
+					</svg>
+					<p>
+						We look back at some of Volvo's classics as Volvo's
+						announced that
+					</p>
+					<span>Elina Kl.</span>
+				</div>
+				<div class="rev-vid">
+					<div class="rev-img-area">
+						<img
+							src="https://cdn.stamped.io/uploads/photos/11079_6001546945_9d45e3db_ee35_4984_9253_4d2c90120eff.jpg"
+						/>
+						<a
+							href=""
+							class="play-rev-vid"
+						>
+							<svg
+								width="28"
+								height="28"
+								viewBox="0 0 28 28"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g clip-path="url(#clip0_100_150)">
+									<path
+										d="M14 27.6111C21.5172 27.6111 27.6111 21.5172 27.6111 14C27.6111 6.48282 21.5172 0.388916 14 0.388916C6.48282 0.388916 0.388916 6.48282 0.388916 14C0.388916 21.5172 6.48282 27.6111 14 27.6111Z"
+										fill="white"
+									></path>
+									<path
+										d="M21.4278 14L10.2926 20.1833V7.81665L21.4278 14Z"
+										fill="black"
+									></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_100_150">
+										<rect
+											width="28"
+											height="28"
+											fill="white"
+										></rect>
+									</clipPath>
+								</defs></svg
+							>Play the video
+						</a>
+					</div>
+					<svg
+						width="189"
+						height="36"
+						viewBox="0 0 189 36"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(0.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M18.5 4L21.6432 13.6738H31.8148L23.5858 19.6525L26.729 29.3262L18.5 23.3475L10.271 29.3262L13.4142 19.6525L5.18521 13.6738H15.3568L18.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(38.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M56.5 4L59.6432 13.6738H69.8148L61.5858 19.6525L64.729 29.3262L56.5 23.3475L48.271 29.3262L51.4142 19.6525L43.1852 13.6738H53.3568L56.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(76.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M94.5 4L97.6432 13.6738H107.815L99.5858 19.6525L102.729 29.3262L94.5 23.3475L86.271 29.3262L89.4142 19.6525L81.1852 13.6738H91.3568L94.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(114.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M132.5 4L135.643 13.6738H145.815L137.586 19.6525L140.729 29.3262L132.5 23.3475L124.271 29.3262L127.414 19.6525L119.185 13.6738H129.357L132.5 4Z"
+							fill="white"
+						></path>
+						<rect
+							width="36"
+							height="36"
+							transform="translate(152.5)"
+							fill="#009E6E"
+						></rect>
+						<path
+							d="M170.5 4L173.643 13.6738H183.815L175.586 19.6525L178.729 29.3262L170.5 23.3475L162.271 29.3262L165.414 19.6525L157.185 13.6738H167.357L170.5 4Z"
+							fill="white"
+						></path>
+					</svg>
+					<p>
+						We look back at some of Volvo's classics as Volvo's
+						announced that
+					</p>
+					<span>Elina Kl.</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

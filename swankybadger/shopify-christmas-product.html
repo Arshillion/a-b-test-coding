@@ -1,0 +1,75 @@
+<style>
+	.christmas-product {
+		border-radius: 6px;
+		background: #ef0039;
+		display: flex;
+		padding: 10px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		background-image: url('https://i.ibb.co/Gn5GGG3/bg-snow.png'),
+			url('https://i.ibb.co/Gn5GGG3/bg-snow.png'),
+			url('https://i.ibb.co/Gn5GGG3/bg-snow.png');
+		background-repeat: no-repeat;
+		background-size: 16px, 24px, 24px;
+		background-position: left 10px top 10px, right 10px top 10px,
+			right 10px bottom -8px;
+		width: 100%;
+		max-width: 400px;
+		margin-bottom: 12px;
+	}
+	.christmas-product span {
+		color: #fff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 18px;
+	}
+</style>
+<div class="christmas-product">
+	<img
+		src="https://i.ibb.co/ydx99FL/christmas-tree-green.png"
+		alt=""
+	/>
+	<span class="message-1"
+		>Hurry! Order by <span id="device_date"></span> to receive before
+		Christmas</span
+	>
+	<span
+		class="message-2"
+		style="display: none"
+		>Use code "HOLIDAY23" to get UPTO 73% OFF</span
+	>
+</div>
+
+<script>
+	const device_date = () => {
+		const options = {
+			day: 'numeric',
+			month: 'long',
+			ordinal: true,
+		};
+		const today = new Date();
+		const formatter = new Intl.DateTimeFormat('en-US', options);
+		return formatter.format(today);
+	};
+	const span_device_date = document.querySelector('#device_date');
+	span_device_date.innerText = device_date();
+
+	let current_type = 1;
+	setInterval(() => {
+		const span_1 = document.querySelector('.christmas-product .message-1');
+		const span_2 = document.querySelector('.christmas-product .message-2');
+		if (span_1 && span_2) {
+			if (current_type === 1) {
+				current_type = 2;
+				span_1.style.display = 'none';
+				span_2.style.display = 'block';
+			} else {
+				current_type = 1;
+				span_1.style.display = 'block';
+				span_2.style.display = 'none';
+			}
+		}
+	}, 5000);
+</script>
