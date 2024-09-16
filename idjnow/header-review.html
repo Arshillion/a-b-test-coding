@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<style>
+			.idj-rev-area * {
+				margin: 0;
+				padding: 0;
+			}
+
+			.idj-rev-area {
+				overflow: hidden;
+			}
+
+			.idj-rev-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-bottom: 1px solid #dfdfdf;
+				padding: 6px 0;
+			}
+			.idj-rev-header > div {
+				display: flex;
+				align-items: center;
+			}
+			.idj-revs {
+				display: flex;
+				align-items: center;
+				width: max-content;
+				gap: 10px;
+			}
+			.idj-rev {
+				width: 33vw;
+			}
+			.idj-rev-content > div {
+				display: flex;
+				align-items: center;
+			}
+			.idj-rev-footer {
+				border-bottom: 1px solid red;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				padding: 6px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="idj-rev-area">
+			<div class="idj-rev-header">
+				<h4>Real Reviews From Real Customers</h4>
+				<div>
+					<img src="" />
+					<span>539 Reviews</span>
+					<div>
+						<span class="prev-rev"><</span>
+						<span class="next-rev">></span>
+					</div>
+				</div>
+			</div>
+			<div class="idj-revs">
+				<div class="idj-rev">
+					<img
+						class="idj-rev-img"
+						src=""
+					/>
+					<div class="idj-rev-content">
+						<div>
+							<img src="" />
+							<span>08/01/23</span>
+						</div>
+						<h4>Everything went smooth. Order arrived</h4>
+						<p>
+							Everything went smooth. Order arrived on time and
+							perfectly in tact
+						</p>
+						<small>Marcos C.</small>
+					</div>
+				</div>
+				<div class="idj-rev">
+					<img
+						class="idj-rev-img"
+						src=""
+					/>
+					<div class="idj-rev-content">
+						<div>
+							<img src="" />
+							<span>08/01/23</span>
+						</div>
+						<h4>Everything went smooth. Order arrived</h4>
+						<p>
+							Everything went smooth. Order arrived on time and
+							perfectly in tact
+						</p>
+						<small>Marcos C.</small>
+					</div>
+				</div>
+				<div class="idj-rev">
+					<img
+						class="idj-rev-img"
+						src=""
+					/>
+					<div class="idj-rev-content">
+						<div>
+							<img src="" />
+							<span>08/01/23</span>
+						</div>
+						<h4>Everything went smooth. Order arrived</h4>
+						<p>
+							Everything went smooth. Order arrived on time and
+							perfectly in tact
+						</p>
+						<small>Marcos C.</small>
+					</div>
+				</div>
+				<div class="idj-rev">
+					<img
+						class="idj-rev-img"
+						src=""
+					/>
+					<div class="idj-rev-content">
+						<div>
+							<img src="" />
+							<span>08/01/23</span>
+						</div>
+						<h4>Everything went smooth. Order arrived</h4>
+						<p>
+							Everything went smooth. Order arrived on time and
+							perfectly in tact
+						</p>
+						<small>Marcos C.</small>
+					</div>
+				</div>
+				<div class="idj-rev">
+					<img
+						class="idj-rev-img"
+						src=""
+					/>
+					<div class="idj-rev-content">
+						<div>
+							<img src="" />
+							<span>08/01/23</span>
+						</div>
+						<h4>Everything went smooth. Order arrived</h4>
+						<p>
+							Everything went smooth. Order arrived on time and
+							perfectly in tact
+						</p>
+						<small>Marcos C.</small>
+					</div>
+				</div>
+			</div>
+			<div class="idj-rev-footer">
+				<div class="idj-rev-powered">Powered by <img src="" /></div>
+			</div>
+		</div>
+		<script>
+			const idj_revs = document.querySelector('.idj-revs');
+			const prev_rev = document.querySelector('.prev-rev');
+			const next_rev = document.querySelector('.next-rev');
+			prev_rev.addEventListener('click', () => {
+				idj_revs.scrollLeft += '33vw';
+			});
+			next_rev.addEventListener('click', () => {
+				idj_revs.scrollLeft += '33vw';
+			});
+		</script>
+	</body>
+</html>
