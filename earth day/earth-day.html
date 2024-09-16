@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+			@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+			body {
+				margin: 0;
+				font-family: 'Inter', sans-serif;
+			}
+			.container {
+				max-width: 1280px;
+				margin: 20px auto;
+			}
+			.top-message {
+				background: #c63093;
+				font-weight: 400;
+				font-size: 16px;
+				color: #ffffff;
+				text-align: center;
+				padding: 10px;
+			}
+			nav {
+				display: grid;
+				grid-template-columns: 32px auto 70px;
+				align-items: center;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			nav .mobile-sidebar {
+				display: none;
+			}
+			nav .links {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				padding: 0 30px;
+			}
+			nav .links a {
+				font-weight: 400;
+				font-size: 16px;
+				text-transform: uppercase;
+				color: #212121;
+				text-decoration: none;
+			}
+			nav .cart-area {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			nav .sidebar-area {
+				display: none;
+				background: #f9f9f9;
+				transition: 0.3s;
+			}
+			@media only screen and (max-width: 767px) {
+				nav {
+					grid-template-columns: auto 1fr 70px;
+					justify-content: center;
+				}
+				nav .mobile-sidebar {
+					display: block;
+				}
+				nav .links {
+					display: none;
+				}
+				nav .logo {
+					margin: auto;
+				}
+				nav .sidebar-area {
+					display: block;
+					padding: 20px;
+					left: -280px;
+					position: fixed;
+					top: 0;
+					bottom: 0;
+					width: 280px;
+					box-sizing: border-box;
+					z-index: 999;
+				}
+				nav .sidebar-area .close-area {
+					color: #777;
+					display: flex;
+					justify-content: flex-end;
+					padding: 20px 0;
+				}
+				nav .sidebar-area .mobile-links a {
+					display: block;
+					font-weight: 400;
+					font-size: 16px;
+					text-transform: uppercase;
+					color: #212121;
+					padding: 10px 0;
+					border-bottom: 1px solid #777;
+					text-decoration: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top-message">Free Shipping $125+ and Free Returns</div>
+		<nav class="container">
+			<div
+				id="mobileSidebar"
+				class="sidebar-area"
+			>
+				<div class="close-area">
+					<i
+						id="closeSidebar"
+						class="fa fa-times fa-xl"
+					></i>
+				</div>
+				<div class="mobile-links">
+					<a href="">shop</a>
+					<a href="">mealtime guide</a>
+					<a href="">about us</a>
+					<a href="">evidence</a>
+					<a href="">schools</a>
+				</div>
+			</div>
+			<div
+				id="openSidebar"
+				class="mobile-sidebar"
+			>
+				<svg
+					width="20"
+					height="18"
+					viewBox="0 0 20 18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect
+						width="20"
+						height="2"
+						fill="#158CB5"
+					/>
+					<rect
+						y="8"
+						width="20"
+						height="2"
+						fill="#158CB5"
+					/>
+					<rect
+						y="16"
+						width="20"
+						height="2"
+						fill="#158CB5"
+					/>
+				</svg>
+			</div>
+			<a
+				href=""
+				class="logo"
+			>
+				<img
+					src="https://i.ibb.co/4Pb28Jf/logo.png"
+					alt=""
+				/>
+			</a>
+			<div class="links">
+				<a href="">shop</a>
+				<a href="">mealtime guide</a>
+				<a href="">about us</a>
+				<a href="">evidence</a>
+				<a href="">schools</a>
+			</div>
+			<div class="cart-area">
+				<a
+					href=""
+					class="search"
+				>
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M19.4073 17.7527L14.9969 13.3422C16.0587 11.9286 16.6319 10.208 16.63 8.44C16.63 3.92406 12.9559 0.25 8.44 0.25C3.92406 0.25 0.25 3.92406 0.25 8.44C0.25 12.9559 3.92406 16.63 8.44 16.63C10.208 16.6319 11.9286 16.0587 13.3422 14.9969L17.7527 19.4073C17.9759 19.6069 18.2671 19.7135 18.5664 19.7051C18.8658 19.6967 19.1506 19.574 19.3623 19.3623C19.574 19.1506 19.6967 18.8658 19.7051 18.5664C19.7135 18.2671 19.6069 17.9759 19.4073 17.7527ZM2.59 8.44C2.59 7.28298 2.9331 6.15194 3.5759 5.18992C4.21871 4.22789 5.13235 3.47808 6.2013 3.03531C7.27025 2.59253 8.44649 2.47668 9.58128 2.70241C10.7161 2.92813 11.7584 3.48529 12.5766 4.30343C13.3947 5.12156 13.9519 6.16393 14.1776 7.29872C14.4033 8.43351 14.2875 9.60975 13.8447 10.6787C13.4019 11.7476 12.6521 12.6613 11.6901 13.3041C10.7281 13.9469 9.59702 14.29 8.44 14.29C6.88906 14.2881 5.40217 13.6712 4.30548 12.5745C3.2088 11.4778 2.59186 9.99095 2.59 8.44Z"
+							fill="#3096BE"
+						/>
+					</svg>
+				</a>
+				<a
+					href=""
+					class="cart"
+				>
+					<svg
+						width="18"
+						height="21"
+						viewBox="0 0 18 21"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M9 0C9.65661 0 10.3068 0.129329 10.9134 0.380602C11.52 0.631876 12.0712 1.00017 12.5355 1.46447C12.9998 1.92876 13.3681 2.47995 13.6194 3.08658C13.8707 3.69321 14 4.34339 14 5V7H17C17.2652 7 17.5196 7.10536 17.7071 7.29289C17.8946 7.48043 18 7.73478 18 8V20C18 20.2652 17.8946 20.5196 17.7071 20.7071C17.5196 20.8946 17.2652 21 17 21H1C0.734784 21 0.48043 20.8946 0.292893 20.7071C0.105357 20.5196 0 20.2652 0 20V8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H4V5C4 3.67392 4.52678 2.40215 5.46447 1.46447C6.40215 0.526784 7.67392 0 9 0ZM14 10H12V11C12.0003 11.2549 12.0979 11.5 12.2728 11.6854C12.4478 11.8707 12.687 11.9822 12.9414 11.9972C13.1958 12.0121 13.4464 11.9293 13.6418 11.7657C13.8373 11.6021 13.9629 11.3701 13.993 11.117L14 11V10ZM6 10H4V11C4.00028 11.2549 4.09788 11.5 4.27285 11.6854C4.44782 11.8707 4.68695 11.9822 4.94139 11.9972C5.19584 12.0121 5.44638 11.9293 5.64183 11.7657C5.83729 11.6021 5.9629 11.3701 5.993 11.117L6 11V10ZM9 2C8.23479 1.99996 7.49849 2.29233 6.94174 2.81728C6.38499 3.34224 6.04989 4.06011 6.005 4.824L6 5V7H12V5C12 4.23479 11.7077 3.49849 11.1827 2.94174C10.6578 2.38499 9.93989 2.04989 9.176 2.005L9 2Z"
+							fill="#3096BE"
+						/>
+					</svg>
+				</a>
+			</div>
+		</nav>
+		<script>
+			const sidebar = document.querySelector('#mobileSidebar');
+			const closeSidebarButton = document.querySelector('#closeSidebar');
+			const openSidebarButton = document.querySelector('#openSidebar');
+			openSidebarButton.addEventListener('click', () => {
+				sidebar.style.left = '0px';
+			});
+			closeSidebarButton.addEventListener('click', () => {
+				sidebar.style.left = '-280px';
+			});
+			document.body.addEventListener('click', () => {
+				if (!sidebar.contains(event.target) && !openSidebarButton.contains(event.target)) {
+					sidebar.style.left = '-280px';
+				}
+			});
+		</script>
+	</body>
+</html>
