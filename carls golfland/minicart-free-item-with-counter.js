@@ -1,3 +1,181 @@
+const style = `
+<style>
+	html body.test-trigger-mini-cart-test .bm-t-mini-cart-wrapper {
+		border: solid 1px #d5d5d5;
+		margin: 10px;
+		border-radius: 5px;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.bm-t-mini-cart-main {
+		padding: 12px 20px;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.bm-t-mini-cart-price
+		span.bm-birdie {
+		font-weight: 700;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.bm-t-mini-cart-price
+		span.bm-birdie-free-shipping {
+		color: #006948;
+		font-weight: 700;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.bm-t-mini-cart-price {
+		font-size: 15px;
+		margin: 10px 0;
+		text-align: center;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.mini-cart-suggestions {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		margin: 10px 0;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.mini-cart-link {
+		border: 1px solid #006948;
+		padding: 12px 18px;
+		border-radius: 5px;
+		cursor: pointer;
+		text-decoration: unset;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		color: #006948;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.mini-cart-link:hover {
+		background-color: #006948;
+		color: #fff;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.bm-t-mini-cart-progressBar {
+		width: 100%;
+		background-color: #f0f0f0;
+		position: relative;
+		margin: 10px 0;
+	}
+	html
+		body.test-trigger-mini-cart-test
+		.bm-t-mini-cart-wrapper
+		.bm-t-mini-cart-progressBar
+		.bm-t-mini-cart-progressBar-child {
+		background-color: #006948;
+		border-radius: 5px;
+		height: 20px;
+		width: 0;
+		transition: width 0.5s ease-in-out;
+	}
+	body .bm-freeshipping-activated-two,
+	body .bm-freeshipping-activated-one,
+	body .bm-freeshipping-activated-one img {
+		display: none;
+	}
+	html .freeshipping-activated .bm-freeshipping-activated-two {
+		position: absolute;
+		width: 40px;
+		height: 20px;
+		right: -5px;
+		top: 0;
+		background: #ffffff;
+		border-radius: 20px;
+		display: block;
+	}
+	html .freeshipping-activated .bm-freeshipping-activated-one {
+		position: absolute;
+		right: -5px;
+		top: -21px;
+		z-index: 22;
+		border-radius: 20px;
+		display: block;
+	}
+	html .freeshipping-activated .bm-freeshipping-activated-one img {
+		width: 40px;
+		height: 40px;
+		display: block;
+	}
+	@media (min-width: 320px) and (max-width: 480px) {
+		html
+			body.test-trigger-mini-cart-test
+			.bm-t-mini-cart-wrapper
+			.mini-cart-link {
+			padding: 10px 16px;
+		}
+		html
+			body.test-trigger-mini-cart-test
+			.bm-t-mini-cart-wrapper
+			.mini-cart-suggestions {
+			gap: 8px;
+		}
+		html body.test-trigger-mini-cart-test .bm-t-mini-cart-price {
+			font-size: 14px;
+			margin: 10px 0;
+		}
+	}
+	.free-item {
+		cursor: default !important;
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	.free-item-info * {
+		margin: 0;
+		padding: 0;
+	}
+	.free-item-info h6 {
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: bold;
+		margin-bottom: 4px;
+	}
+
+	.free-item-info p {
+		font-size: 12px;
+		line-height: 12px;
+	}
+
+	.free-item-info h6 span {
+		text-decoration: underline;
+	}
+	.free-item img {
+		width: 50px;
+	}
+	.free-item strong {
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: bold;
+		margin-left: auto;
+	}
+</style>
+`;
+
+const style_int = setInterval(() => {
+	const head = document.querySelector('head');
+	if (head) {
+		head.insertAdjacentHTML('beforeend', style);
+		clearInterval(style_int);
+	}
+}, 10);
+
 (() => {
 	var $ = Object.defineProperty;
 	var s = (t, e) => $(t, 'name', { value: e, configurable: !0 });
@@ -198,4 +376,21 @@
 	y(['totals/', 'sections=cart', 'checkout/cart/add/'], S);
 })();
 
+const new_free_item_html = `
+<li class="free-item">
+<img src="https://carlsgolfland.s3.us-east-2.amazonaws.com/holiday-returns.png">
+<div class="free-item-info">
+  <h6><span>Extended</span> Holiday Returns</h6>
+  <p>Order now, send it back later.</br>Free returns until 1/31/24</p>
+</div>
+<strong>Free</strong>
+</li>
+`;
 
+setInterval(() => {
+	const min_cart_ol = document.querySelector('#mini-cart');
+	const min_cart_li = [...document.querySelectorAll('#mini-cart li')];
+	if (min_cart_li.length > 0 && !document.querySelector('.free-item')) {
+		min_cart_ol.insertAdjacentHTML('beforeend', new_free_item_html);
+	}
+}, 10);

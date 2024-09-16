@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>A/B Testing Carl Promise Section</title>
+		<style>
+			.ab-section-items {
+				display: flex;
+				margin: 0 20px;
+				margin-top: 60px;
+			}
+			@media only screen and (max-width: 991px) {
+				.ab-section-items {
+					display: none;
+				}
+			}
+			.ab-section-item {
+				border: 1px solid #ccc;
+				border-radius: 5px;
+
+				flex: 1;
+				margin: 0 10px;
+			}
+			.ab-section-item:nth-child(1) {
+				margin-left: 0;
+			}
+			.ab-section-item:last-child {
+				margin-right: 0;
+			}
+			.ab-section-item__icon {
+				text-align: center;
+			}
+			.ab-section-item__icon img {
+				width: 50px;
+				margin-top: -25px;
+			}
+			.ab-section-item__title {
+				text-align: center;
+				margin-top: 16px;
+			}
+			.ab-section-item__title h2 {
+				font-size: 14px;
+				color: #333333;
+				margin: 0;
+			}
+			.ab-section-item__description {
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				padding: 0 20px;
+			}
+			.ab-section-item__description p {
+				font-size: 15px;
+				color: #535353;
+			}
+			@media only screen and (max-width: 1210px) {
+				.ab-section-item__title {
+					margin-top: 8px;
+				}
+				.ab-section-item__description {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					padding: 0 10px;
+				}
+				.ab-section-item__title h2 {
+					font-size: 12px;
+					padding: 0 2px;
+				}
+				.ab-section-item__description p {
+					font-size: 13px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div data-content-type="row" data-appearance="full-width">
+			<div class="row-full-width-inner" data-element="inner">
+				<div class="ab-section-items">
+					<div class="ab-section-item">
+						<div class="ab-section-item__icon">
+							<img
+								src="https://carlsgolfland.s3.us-east-2.amazonaws.com/cgl-icon-experts.png"
+								alt=""
+								role="presentation"
+								data-uw-rm-ima="un"
+							/>
+						</div>
+						<div class="ab-section-item__title">
+							<h2>Experts on Call</h2>
+						</div>
+						<div class="ab-section-item__description">
+							<p>World-Class customer service at the ready.</p>
+						</div>
+					</div>
+					<div class="ab-section-item">
+						<div class="ab-section-item__icon">
+							<img
+								src="https://carlsgolfland.s3.us-east-2.amazonaws.com/cgl-icon-ship.png"
+								alt=""
+								role="presentation"
+								data-uw-rm-ima="un"
+							/>
+						</div>
+						<div class="ab-section-item__title">
+							<h2>Free Shipping</h2>
+						</div>
+						<div class="ab-section-item__description">
+							<p data-uw-rm-sr="">Free Shipping on all orders over $50</p>
+						</div>
+					</div>
+					<div class="ab-section-item">
+						<div class="ab-section-item__icon">
+							<img
+								src="https://carlsgolfland.s3.us-east-2.amazonaws.com/cgl-icon-delivery-dates.png"
+								alt=""
+								role="presentation"
+								data-uw-rm-ima="un"
+							/>
+						</div>
+						<div class="ab-section-item__title">
+							<h2>Guaranteed Delivery Dates</h2>
+						</div>
+						<div class="ab-section-item__description">
+							<p>See the guaranteed date at checkout</p>
+						</div>
+					</div>
+					<div class="ab-section-item">
+						<div class="ab-section-item__icon">
+							<img
+								src="https://carlsgolfland.s3.us-east-2.amazonaws.com/cgl-icon-returns.png"
+								alt=""
+								role="presentation"
+								data-uw-rm-ima="un"
+							/>
+						</div>
+						<div class="ab-section-item__title">
+							<h2>30-Day Returns</h2>
+						</div>
+						<div class="ab-section-item__description">
+							<p>Something not right? Send it back.</p>
+						</div>
+					</div>
+					<div class="ab-section-item">
+						<div class="ab-section-item__icon">
+							<img
+								src="https://carlsgolfland.s3.us-east-2.amazonaws.com/cgl-icon-price-match.png"
+								alt=""
+								role="presentation"
+								data-uw-rm-ima="un"
+							/>
+						</div>
+						<div class="ab-section-item__title">
+							<h2>30-Day Price Protection</h2>
+						</div>
+						<div class="ab-section-item__description">
+							<p>Find a lower Price? We’ll match it.</p>
+						</div>
+					</div>
+					<div class="ab-section-item">
+						<div class="ab-section-item__icon">
+							<img
+								src="https://carlsgolfland.s3.us-east-2.amazonaws.com/cgl-icon-trade.png"
+								alt=""
+								role="presentation"
+								data-uw-rm-ima="un"
+							/>
+						</div>
+						<div class="ab-section-item__title">
+							<h2>Trade-In, Trade-Up</h2>
+						</div>
+						<div class="ab-section-item__description">
+							<p>Clubs collecting dust? Trade-in, get paid.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
