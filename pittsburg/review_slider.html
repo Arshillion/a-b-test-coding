@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<blockquote class="quotes-slider__text text-center">
+			<span class="quote-icon">
+				<!-- <svg
+					aria-hidden="true"
+					focusable="false"
+					role="presentation"
+					class="icon icon-quote"
+					viewBox="0 0 41 35"
+				>
+					<path
+						d="M10.208 17.711h6.124v16.332H0V21.684C0 8.184 5.444.956 16.332 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766zm24.498 0h6.124v16.332H24.498V21.684C24.498 8.184 29.942.956 40.83 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766z"
+						fill="#000"
+						fill-rule="evenodd"
+					></path></svg> -->
+			</span>
+
+			<cite>D.C. Clarke</cite>
+
+			<div class="rte-setting rte">
+				<p>
+					The team at Pittsburgh Spray are always very helpful and
+					very knowledgeable. Extremely easy to work with and they
+					have been supporting my business with great care for the
+					past several years. Patrick works closely with us on a
+					variety of projects and the rest of the team has always been
+					there when we needed additional help. I highly recommend!
+				</p>
+			</div>
+
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		</blockquote>
+		<script>
+			const quoteIcon = document.querySelector('.quote-icon');
+			const reviewHeader = document.createElement('h2');
+			reviewHeader.innerHTML = 'Extremely easy to work';
+			quoteIcon.appendChild(reviewHeader);
+		</script>
+	</body>
+</html>

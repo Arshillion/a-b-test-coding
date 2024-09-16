@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+			.rev-area {
+				font-family: 'Roboto', sans-serif;
+				width: 100%;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.rev_next,
+			.rev_prev {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 50%;
+				background: white;
+				color: #212121;
+				border: 1px solid #212121;
+			}
+
+			.rev_next:disabled,
+			.rev_prev:disabled {
+				background: white;
+				color: #cecece;
+				border: 1px solid #cecece;
+			}
+
+			.rev_next {
+				right: 10px;
+			}
+
+			.rev_prev {
+				left: 10px;
+			}
+
+			.rev-header {
+				font-family: 'Roboto', sans-serif;
+				font-size: 28px;
+				line-height: 1.18;
+				font-weight: 600;
+			}
+
+			.item-rev {
+				display: flex;
+				align-items: stretch;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			.single-item-rev {
+				background-color: #fafafa;
+				padding: 10px;
+				width: 50%;
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+			}
+
+			.single-item-rev .strs {
+				color: #ffd700;
+			}
+
+			.single-item-rev a {
+				color: #437dff;
+				font-size: 12px;
+			}
+
+			.single-item-rev span {
+				margin-top: 4px;
+				color: #757575;
+				font-size: 12px;
+				line-height: 1.18;
+			}
+
+			.single-item-rev p {
+				font-size: 14px;
+				line-height: 1.18;
+				margin-top: 4px;
+				color: #212121;
+			}
+
+			@media only screen and (max-width: 991px) {
+				.single-item-rev {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p class="rev-header">What people are saying about pittsburghsprayequip</p>
+		<section class="rev-area">
+			<section class="item-rev">
+				<button class="rev_prev">prev</button>
+				<button class="rev_next">next</button>
+				<section class="single-item-rev">
+					<section class="strs">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</section>
+					<span>Review for: <a href="">link 1</a> </span>
+					<span>Marie Grace Published 450 days ago</span>
+					<p>
+						Great place! My friends and i enjoyed roaming around. The weather was hot so we got bit
+						tan, ha! ha! ha! I suggest bring sunblock and hat or umbrella. But all sweat are worth
+						it because you wil definetly enjoy! You will learn a lot about the stories of the rock
+						formations. although you need to take a long line to get a closer pictures with the
+						rocks. The ticket price is so affordable and experience is valuable! This tour is a must
+						try! Thanks Klook!
+					</p>
+				</section>
+				<section class="single-item-rev">
+					<section class="strs">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</section>
+					<span>Review for: <a href="">link 2</a> </span>
+					<span>Marie Grace Published 450 days ago</span>
+					<p>
+						Great place! My friends and i enjoyed roaming around. The weather was hot so we got bit
+						tan, ha! ha! ha! I suggest bring sunblock and hat or umbrella. But all sweat are worth
+						it because you wil definetly enjoy! You will learn a lot about the stories of the rock
+						formations. although you need to take a long line to get a closer pictures with the
+						rocks. The ticket price is so affordable and experience is valuable! This tour is a must
+						try! Thanks Klook!
+					</p>
+				</section>
+				<section class="single-item-rev">
+					<section class="strs">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</section>
+					<span>Review for: <a href="">link 3</a> </span>
+					<span>Marie Grace Published 450 days ago</span>
+					<p>
+						Great place! My friends and i enjoyed roaming around. The weather was hot so we got bit
+						tan, ha! ha! ha! I suggest bring sunblock and hat or umbrella. But all sweat are worth
+						it because you wil definetly enjoy! You will learn a lot about the stories of the rock
+						formations. although you need to take a long line to get a closer pictures with the
+						rocks. The ticket price is so affordable and experience is valuable! This tour is a must
+						try! Thanks Klook!
+					</p>
+				</section>
+			</section>
+		</section>
+		<script>
+			const breakingWidth = 991;
+			const prevButton = document.querySelector('.rev_prev');
+			const nextButton = document.querySelector('.rev_next');
+			const revArea = document.querySelector('.item-rev');
+			const revs = Array.from(document.querySelectorAll('.single-item-rev'));
+			const revDesign = () => {
+				const showRev = revs.filter((rev, i) => rev.style.display === 'flex');
+				showRev.map((rev, i) => {
+					if (i !== showRev.length - 1) {
+						rev.style.marginRight = '20px';
+					} else {
+						rev.style.marginRight = '0px';
+					}
+				});
+			};
+			prevButton.disabled = true;
+			const initialLoad = () => {
+				const windowWidth = window.innerWidth;
+				if (windowWidth > breakingWidth) {
+					initiateDisplay(revs, [2]);
+				} else {
+					initiateDisplay(revs, [1, 2]);
+				}
+			};
+
+			const initiateDisplay = (revs, disableIds) => {
+				revs.map((rev, i) => {
+					if (disableIds.includes(i)) {
+						rev.style.display = 'none';
+					} else {
+						rev.style.display = 'flex';
+					}
+				});
+				revDesign();
+			};
+
+			window.addEventListener('resize', () => {
+				const windowWidth = window.innerWidth;
+				if (windowWidth > breakingWidth) {
+					initiateDisplay(revs, [2]);
+				} else {
+					initiateDisplay(revs, [1, 2]);
+				}
+			});
+
+			const clickDisplay = (type) => {
+				const enableIds = [];
+				revs.map((rev, i) => {
+					rev.style.display === 'flex' && enableIds.push(i);
+				});
+				console.log("🚀 ~ file: pittsburg_slider.html ~ line 210 ~ clickDisplay ~ enableIds", enableIds)
+				if (type === 'prev' && enableIds[0] !== 0) {
+					initiateDisplay(
+						revs,
+						enableIds.length === 2 ? [2] : [0, 1, 2].filter((id) => id !== enableIds[0] - 1)
+					);
+
+					nextButton.disabled = false;
+					if (enableIds[0] === 1) {
+						prevButton.disabled = true;
+					}
+				}
+				if (type === 'next' && enableIds[0] !== 2) {
+					initiateDisplay(
+						revs,
+						enableIds.length === 2 ? [0] : [0, 1, 2].filter((id) => id !== enableIds[0] + 1)
+					);
+
+					prevButton.disabled = false;
+					if (enableIds[enableIds.length - 1] === 1) {
+						nextButton.disabled = true;
+					}
+				}
+			};
+
+			prevButton.addEventListener('click', () => {
+				clickDisplay('prev');
+			});
+			nextButton.addEventListener('click', () => {
+				clickDisplay('next');
+			});
+			initialLoad();
+		</script>
+	</body>
+</html>
