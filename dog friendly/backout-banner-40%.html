@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<style>
+			.blackout-sale_wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* margin-top: -25px; */
+				/* padding: 0px 50px; */
+			}
+			.blackout-sale {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #001c65;
+				/* max-width: 1200px; */
+				width: 100%;
+				padding: 20px 100px;
+				gap: 20px;
+				/* border-radius: 4px; */
+				position: relative;
+			}
+			.blackout-sale * {
+				margin: 0;
+				padding: 0;
+				letter-spacing: normal;
+			}
+			.bf-info-center {
+				text-align: center;
+			}
+			.bf-info-center h4 {
+				color: #f00;
+				font-family: Bebas Neue;
+				font-size: 35px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+			.bf-info-center h1 {
+				color: #f00;
+				font-family: Bebas Neue;
+				font-size: 100px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+			.bf-info-start {
+				position: absolute;
+				top: 40%;
+				transform: translateY(-40%) rotate(-20deg);
+				left: 10%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 10px;
+			}
+			.bf-info-start h5 {
+				color: #fff;
+				text-align: center;
+				font-family: Bebas Neue;
+				font-size: 25px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 78%;
+				text-transform: uppercase;
+				position: relative;
+			}
+			.bf-info-start h4 {
+				color: #fff;
+				font-family: Bebas Neue;
+				font-size: 35px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 78%;
+				text-transform: uppercase;
+				position: relative;
+			}
+			.bf-info-start h4 span {
+				color: #ff5757;
+				font-family: Bebas Neue;
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 78%;
+				text-transform: uppercase;
+			}
+			.bf-info-start h5:before,
+			.bf-info-start h4:before {
+				content: ' ';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -3%;
+				border-bottom: 4px solid #fff;
+				width: 106%;
+			}
+			@media only screen and (max-width: 1200px) {
+				.bf-info-start h5 {
+					font-size: 20px;
+				}
+				.bf-info-start h4 {
+					font-size: 28px;
+				}
+				.bf-info-start h4 span {
+					font-size: 30px;
+				}
+				.bf-info-start h5:before,
+				.bf-info-start h4:before {
+					border-bottom: 2px solid #fff;
+				}
+			}
+			@media only screen and (max-width: 991px) {
+				.bf-info-start h5 {
+					font-size: 14px;
+				}
+				.bf-info-start h4 {
+					font-size: 18px;
+				}
+				.bf-info-start h4 span {
+					font-size: 20px;
+				}
+				.bf-info-start h5:before,
+				.bf-info-start h4:before {
+					border-bottom: 1px solid #fff;
+				}
+			}
+			@media only screen and (max-width: 767px) {
+				.bf-info-start {
+					display: none;
+				}
+				.blackout-sale {
+					padding: 20px;
+				}
+			}
+			@media only screen and (max-width: 450px) {
+				.bf-info-center h1 {
+					font-size: 80px;
+				}
+			}
+		</style>
+		<div class="blackout-sale_wrapper">
+			<div class="blackout-sale">
+				<div class="bf-info-start">
+					<h5>BOXING DAY SALE</h5>
+					<h4>save up to <span>30% off</span> storewide</h4>
+				</div>
+				<div class="bf-info-center">
+					<h4>end of year sale</h4>
+					<h1>40% off<sup>*</sup></h1>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

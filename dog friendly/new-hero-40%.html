@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="hero-outter_wrapper">
+			<div class="hero_wrapper">
+				<div class="hero-image_wrapper">
+					<div class="hero-image_1">
+						<img src="{{section.settings.left-hero | img_url: 'master'}}" />
+					</div>
+					<div class="hero-image_2">
+						<img src="{{section.settings.right-hero | img_url: 'master'}}" />
+					</div>
+				</div>
+				<div
+					class="hero-content-outside_wrapper"
+					style="
+						display: flex;
+						justify-content: center;
+						background: #001c65;
+						box-shadow: -8px 0 8px #001c65;
+						width: 100%;
+					"
+				>
+					<div
+						class="hero-content_wrappper"
+						style="background: #001c65"
+					>
+						<div class="new-banner-info-message">
+							<h2>boxing day</h2>
+							<h4>save up to <strong>30% off</strong> storewide</h4>
+							<h3>end of year sale</h3>
+							<h1>40% off<sup>*</sup></h1>
+						</div>
+						<!-- <span class="hero-title-top">{{ section.settings.title }}</span>
+              <span>
+                <span class="hero-title-bottom">{{ section.settings.title4 }}</span>
+              </span>
+      
+              <div class="hero-description-new">{{ section.settings.text }}</div>
+      
+              <a href="{{section.settings.text-2-url}}" style="padding-bottom: 19px;padding-top: 5px;">
+                <div class="hero-description-new underline-text">{{ section.settings.text2 }}</div>
+              </a> -->
+
+						<div
+							class="hero-button_wrapper"
+							style="width: 100%; display: flex; justify-content: center"
+						>
+							<a
+								href="{{section.settings.button_link}}"
+								class="hero-btn"
+								>{{ section.settings.button_label }}</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+			.new-banner-info-message {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+			.new-banner-info-message * {
+				padding: 0;
+				margin: 0;
+			}
+			.new-banner-info-message h2 {
+				color: #fff;
+				font-family: Bebas Neue;
+				font-size: 38px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				position: relative;
+			}
+			.new-banner-info-message h4:before,
+			.new-banner-info-message h2:before {
+				content: ' ';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -3%;
+				border-bottom: 5px solid #fff;
+				width: 106%;
+			}
+			.new-banner-info-message h4 {
+				color: #fff;
+				font-family: Bebas Neue;
+				font-size: 30px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: normal;
+				position: relative;
+			}
+			.new-banner-info-message h4 strong {
+				color: #ff5757;
+				font-family: Bebas Neue;
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				margin: 0 6px;
+			}
+			.new-banner-info-message h3 {
+				color: #f00;
+				font-family: Bebas Neue;
+				font-size: 35px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				margin-top: 14px;
+			}
+			.new-banner-info-message h1 {
+				color: #f00;
+				font-family: Bebas Neue;
+				font-size: 100px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+			.hero-description-new {
+				padding-top: 10px;
+			}
+			.blur-line {
+				filter: blur(15px);
+			}
+			.index-hero-section {
+				padding: 0;
+			}
+			.hero_wrapper {
+				max-height: 520px;
+			}
+			.hero-image_wrapper {
+				display: flex;
+				width: 100%;
+				box-shadow: 10px 0 -10px #fff;
+				gap: 8px;
+			}
+
+			.hero-image_wrapper img {
+				max-height: 460px;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				height: 100%;
+				min-height: 460px;
+			}
+
+			.hero_wrapper {
+				display: flex;
+			}
+
+			.hero-content_wrappper {
+				background: #99d6ea;
+				color: black;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			@media only screen and (min-width: 994px) {
+				.hero-content_wrappper {
+					padding: 16px;
+				}
+			}
+
+			.hero-title {
+				text-transform: uppercase;
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 50px;
+				line-height: 60px;
+				max-width: 405px;
+				color: white;
+			}
+
+			.hero-description p {
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 30px;
+				max-width: 392px;
+			}
+
+			.hero-btn {
+				color: white;
+				text-transform: uppercase;
+				background: #fd6c01;
+				box-shadow: 0 3.91855px 10.4495px rgba(0, 0, 0, 0.25);
+				border-radius: 78.3711px;
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 35.7532px;
+				line-height: 43px;
+				text-align: center;
+				text-transform: uppercase;
+				padding: 12px 140px;
+			}
+
+			.hero-btn:hover {
+				color: white;
+			}
+
+			.hero-title-top {
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 50px;
+				line-height: 55px;
+
+				color: #fff;
+			}
+
+			.hero-title-bottom {
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 40px;
+				line-height: 48px;
+
+				color: #fff;
+			}
+
+			.hero-title-bottom.orange-bottom {
+				font-family: 'Bebas Neue';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 50px;
+				line-height: 60px;
+
+				color: #fd6c01;
+			}
+
+			.hero-description-new.underline-text {
+				text-decoration: underline;
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 22px;
+				line-height: 33px;
+
+				color: #fff;
+			}
+			.hero-description-new {
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 30px;
+
+				color: #fff;
+			}
+
+			.hero-btn {
+				width: 97%;
+				display: block;
+			}
+			@media only screen and (max-width: 1400px) {
+				.hero-image_wrapper img {
+					max-height: 440px;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					height: 100%;
+					min-height: 440px;
+				}
+			}
+			@media only screen and (max-width: 1250px) {
+				.hero-content_wrappper {
+					padding: 16px;
+				}
+				.hero-title {
+					text-transform: uppercase;
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 50px;
+					line-height: 60px;
+					max-width: 405px;
+					color: white;
+				}
+
+				.hero-description p {
+					font-family: 'Poppins';
+					font-style: normal;
+					font-weight: 500;
+					font-size: 20px;
+					line-height: 30px;
+					max-width: 392px;
+					color: white;
+				}
+				.hero-image_wrapper img {
+					max-height: 420px;
+					height: 100%;
+					width: 100%;
+					min-height: 420px;
+				}
+			}
+
+			@media only screen and (max-width: 1060px) {
+				.hero-content_wrappper {
+					padding: 16px;
+				}
+				.hero-title {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 45px;
+					line-height: 54px;
+					text-align: center;
+					max-width: 405px;
+					color: white;
+				}
+
+				.hero-description p {
+					font-family: 'Poppins';
+					font-style: normal;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 24px;
+					text-align: center;
+					max-width: 392px;
+					color: white;
+				}
+				.hero-image_wrapper img {
+					max-height: 400px;
+					height: 100%;
+					width: 100%;
+					min-height: 400px;
+				}
+				.hero-btn {
+					color: white;
+					text-transform: uppercase;
+					background: #fd6c01;
+					box-shadow: 0 3.91855px 10.4495px rgba(0, 0, 0, 0.25);
+					border-radius: 78.3711px;
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 31.0315px;
+					line-height: 37px;
+					text-align: center;
+					text-transform: uppercase;
+					padding: 12px 115px;
+				}
+			}
+
+			@media only screen and (max-width: 994px) {
+				.hero-description-new {
+					padding-top: 8px;
+					color: white;
+				}
+				.hero-btn {
+					width: 50%;
+					display: block;
+					min-width: 360px;
+				}
+				.hero-image_wrapper img {
+					max-height: 100%;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+					min-width: auto;
+					min-height: auto;
+				}
+				.hero_wrapper {
+					display: flex;
+					flex-direction: column;
+				}
+				.hero_wrapper {
+					max-height: 100%;
+				}
+				.hero-title p {
+					margin: 0;
+					color: white;
+				}
+				.hero-content_wrappper {
+					box-shadow: 0 -15px -15px #99d6ea;
+				}
+				.hero-content_wrappper {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					text-align: center;
+				}
+				.hero-title-top {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 40px;
+					line-height: 48px;
+
+					color: white;
+				}
+
+				.hero-title-bottom {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 45px;
+					line-height: 54px;
+
+					color: white;
+				}
+
+				.hero-title-bottom.orange-bottom {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 55px;
+					line-height: 66px;
+
+					color: #99d6ea;
+				}
+
+				.hero-description-new.underline-text {
+					text-decoration: underline;
+					font-family: 'Poppins';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 24px;
+
+					color: #fff;
+				}
+				.hero-description-new {
+					font-family: 'Poppins';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 22px;
+
+					color: #fff;
+				}
+			}
+
+			@media only screen and (max-width: 500px) {
+				.hero-btn {
+					width: 90%;
+					display: block;
+					min-width: 90%;
+					padding: 12px 80px;
+				}
+				.hero-title {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 35px;
+					line-height: 44px;
+					text-align: center;
+					max-width: 405px;
+					color: white;
+				}
+
+				.hero-description p {
+					font-family: 'Poppins';
+					font-style: normal;
+					font-weight: 500;
+					font-size: 11px;
+					line-height: 21px;
+					text-align: center;
+					max-width: 392px;
+					color: white;
+				}
+				.hero-description-new {
+					font-family: 'Poppins';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 17px;
+					padding-top: 8px;
+					color: white;
+				}
+				.hero-title-top {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 27px;
+					line-height: 36px;
+
+					color: white;
+				}
+
+				.hero-title-bottom {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 31px;
+					line-height: 41px;
+
+					color: white;
+				}
+
+				.hero-title-bottom.orange-bottom {
+					font-family: 'Bebas Neue';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 41px;
+					line-height: 53px;
+
+					color: #99d6ea;
+				}
+			}
+		</style>
+	</body>
+</html>

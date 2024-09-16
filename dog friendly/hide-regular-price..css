@@ -1,0 +1,6 @@
+[data-product-handle]:not(
+		[data-product-handle='df-co-dog-lovers-pack-dog-harness-collar-leash-and-name-patches']
+	):not([data-product-handle='dog-friendly-co-signature-kit'])
+	.product-regular-price {
+	display: none !important;
+}

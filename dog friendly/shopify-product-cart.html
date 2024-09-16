@@ -1,0 +1,55 @@
+<style>
+	.product-block.product-block--price {
+		padding: 0;
+		background: none;
+		border-radius: 0;
+		justify-content: flex-start;
+		gap: 8px;
+	}
+	#product_price_in_cart,
+	.product-block.product-block--price.vs_testing {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	#product_price_in_cart .igPrice {
+		color: #000;
+		font-family: Bebas Neue;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	#product_price_in_cart .igComparePrice {
+		color: #a7a7a7 !important;
+		font-family: Bebas Neue;
+		font-size: 24px !important;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-decoration-line: strikethrough;
+	}
+
+	#add-to-cart-custom-btn .product-block.product-block--price.vs_testing {
+		display: none !important;
+	}
+	.btn.add-to-cart {
+		border-radius: 30px !important;
+	}
+</style>
+
+<script>
+	const price_int = setInterval(() => {
+		const header = document.querySelector(
+			'.product-block.product-block--header'
+		);
+		const price_elm = document.querySelector(
+			'.product-block.product-block--price.vs_testing'
+		);
+		if (header && price_elm) {
+			header.insertAdjacentElement('afterend', price_elm);
+			clearInterval(price_int);
+		}
+	}, 10);
+</script>

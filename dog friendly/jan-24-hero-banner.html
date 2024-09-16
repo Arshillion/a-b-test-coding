@@ -1,0 +1,118 @@
+<div class="hero-banner">
+	<div class="hero-images">
+		<img
+			src="//us.dogfriendlyco.com/cdn/shop/files/blackout_sale_12_1.png?v=1684017555"
+			alt=""
+		/>
+		<img
+			src="//us.dogfriendlyco.com/cdn/shop/files/blackout_sale_14_1.png?v=1684017569"
+			alt=""
+		/>
+	</div>
+	<div class="hero-info">
+		<h2>new year sale up to 30% off sitewide</h2>
+		<p>
+			Style meets function at Dog Friendly Co. Shop today and join over 100,000
+			happy dogs worldwide.
+		</p>
+		<a href="/collections/all">shop now</a>
+	</div>
+</div>
+<br />
+<style>
+	.hero-banner {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
+
+	.hero-images {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: stretch;
+		gap: 8px;
+	}
+	.hero-info {
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		background: #99d6ea;
+		justify-content: center;
+	}
+	.hero-info * {
+		padding: 0;
+		margin: 0;
+	}
+	.hero-info h2 {
+		color: #000;
+		font-family: Bebas Neue;
+		font-size: 50px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	.hero-info p {
+		color: #1c1c1c;
+		font-family: Poppins;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	.hero-info a {
+		color: #fff;
+		text-align: center;
+		font-family: Bebas Neue;
+		font-size: 36px;
+		font-weight: 400;
+		text-transform: uppercase;
+		width: 100%;
+		border-radius: 78.371px;
+		background: #fd6c01;
+		box-shadow: 0px 3.919px 10.449px 0px rgba(0, 0, 0, 0.25);
+		margin-top: 20px;
+	}
+	@media only screen and (max-width: 1220px) {
+		.hero-info h2 {
+			font-size: 32px;
+		}
+		.hero-info p {
+			font-size: 16px;
+		}
+		.hero-info a {
+			font-size: 24px;
+		}
+	}
+	@media only screen and (max-width: 991px) {
+		.hero-info h2 {
+			font-size: 26px;
+		}
+		.hero-info p {
+			font-size: 14px;
+		}
+		.hero-info a {
+			font-size: 20px;
+		}
+		.hero-info {
+			gap: 10px;
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.hero-banner {
+			grid-template-columns: 1fr;
+		}
+		.hero-info h2 {
+			font-size: 32px;
+			text-align: center;
+		}
+		.hero-info p {
+			font-size: 16px;
+			text-align: center;
+		}
+		.hero-info a {
+			font-size: 24px;
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		.hero-info {
+			padding: 20px;
+		}
+	}
+</style>
