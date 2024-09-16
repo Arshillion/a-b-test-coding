@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en"> 
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.new-und-video {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.new-und-50 {
+				width: 45%;
+			}
+			.new-und-info h2 {
+				font-weight: bold;
+				margin: 0;
+			}
+			.new-und-info p {
+				margin: 0;
+				margin-top: 20px;
+				margin-bottom: 30px;
+			}
+			.new-und-info a {
+				background: black;
+				color: white;
+				padding: 10px 20px;
+			}
+			.new-review-bg {
+				padding-top: 40px;
+				padding-bottom: 70px;
+				background: #fafafa;
+			}
+			.new-review__header {
+				text-align: center;
+				font-weight: 700;
+				font-size: 42px;
+			}
+			.new-review {
+				display: flex;
+				align-items: stretch;
+				justify-content: space-between;
+			}
+			.new-review__item {
+				background: white;
+				width: 100%;
+				color: black;
+				padding: 40px 30px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				transition: 0.2s;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			.new-review__item img {
+				width: 40px;
+			}
+			.new-review__item strong {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 12px;
+			}
+			.new-review__item strong span {
+				font-weight: bold;
+				font-size: 14px;
+				margin-bottom: 6px;
+			}
+			.new-review__item p {
+				font-size: 16px;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			.new-review__item:hover {
+				box-shadow: 0 0 25px #00000038;
+			}
+			.new-review__item-active {
+				box-shadow: 0 0 25px #00000038;
+			}
+			.new-below {
+				transition: 0.1s;
+			}
+			.new-below:hover {
+				z-index: 100;
+				transform: scale(1.1);
+			}
+			@media only screen and (max-width: 1000px) {
+				.new-und-video {
+					flex-direction: column;
+				}
+				.new-und-50 {
+					width: 100%;
+				}
+				.new-und-info {
+					margin-bottom: 20px;
+				}
+				.new-review__item {
+					box-shadow: 0 0 10px #00000038;
+				}
+			}
+			@media only screen and (max-width: 850px) {
+				.new-review {
+					flex-direction: column;
+				}
+			}
+			@media only screen and (max-width: 660px) {
+				.new-review-bg {
+					padding-top: 20px;
+					padding-bottom: 35px;
+				}
+				.new-review__item img {
+					width: 30px;
+				}
+				.new-review__item {
+					padding: 20px;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+				.new-review__header {
+					font-size: 30px;
+				}
+				.new-review__item p {
+					margin-top: 15px;
+					margin-bottom: 15px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="debrief-new">
+			<div class="debrief-item">
+				<img
+					class="debrief-item__img"
+					src="https://cdn.shopify.com/s/files/1/0049/9263/0882/files/comfort-guarantee_038a08c3-223e-4d32-a884-1b1f331bd7cd_300x.png?v=1645751807"
+					alt=""
+				/>
+				<p class="debrief-item__header">Comfort Guarantee</p>
+				<p class="debrief-item__info">If you don't love your first pair, they're free</p>
+			</div>
+			<div class="debrief-item">
+				<img
+					class="debrief-item__img"
+					src="https://cdn.shopify.com/s/files/1/0049/9263/0882/files/Silky-Soft_Sustainable_Fabric_01_300x.png?v=1642032070"
+					alt=""
+				/>
+				<p class="debrief-item__header">Made in Turkey</p>
+				<p class="debrief-item__info">From sustainable MicroModal</p>
+			</div>
+			<div class="debrief-item">
+				<img
+					class="debrief-item__img"
+					src="https://cdn.shopify.com/s/files/1/0049/9263/0882/files/bulk-discount-icon-2_300x.png?v=1645754277"
+					alt=""
+				/>
+				<p class="debrief-item__header">Bulk Savings</p>
+				<p class="debrief-item__info">Create a multipack and save up to $99</p>
+			</div>
+		</div>
+		<div class="section__color-wrapper vertical-breather new-review-bg">
+			<div class="container">
+			  <h2 class="new-review__header">Don't take our word for it</h2>
+		<native-carousel class="text-with-icons">
+			<div class="text-with-icons__list hide-scrollbar">
+				<native-carousel-item id="block-static-text-with-icons-static-text-with-icons-0" class="text-with-icons__item">
+					<div class="new-review__item"><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDEgODAiPiAgICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNDEuNzdWMGg0MS42MDR2NDEuNzdMMjAuMDI2IDgwSC45ODdMMjEuNzIgNDEuNzdIMHptNTkuMzk2IDBWMEgxMDF2NDEuNzdMNzkuNDIyIDgwSDYwLjM4M2wyMC43MzItMzguMjNINTkuMzk2eiIgZmlsbD0iY3VycmVudENvbG9yIiAvPjwvc3ZnPg==">
+						<div class="rating__stars" role="img" aria-label="4.82 out of 5.0 stars"><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg></div>
+						<p>
+							"Very happy so far, comfy undies dried quickly on a recent kayak trip Horizontal fly
+							actually makes sense."
+						</p>
+						<strong><span>Joseph T.</span>Gisborne, AU</strong>
+					</div>
+				</native-carousel-item>
+				<native-carousel-item hidden="" id="block-static-text-with-icons-static-text-with-icons-1" class="text-with-icons__item">
+					<div class="new-review__item new-review__item-active">
+						<img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDEgODAiPiAgICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNDEuNzdWMGg0MS42MDR2NDEuNzdMMjAuMDI2IDgwSC45ODdMMjEuNzIgNDEuNzdIMHptNTkuMzk2IDBWMEgxMDF2NDEuNzdMNzkuNDIyIDgwSDYwLjM4M2wyMC43MzItMzguMjNINTkuMzk2eiIgZmlsbD0iY3VycmVudENvbG9yIiAvPjwvc3ZnPg==">
+						<div class="rating__stars" role="img" aria-label="4.82 out of 5.0 stars"><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg></div>
+						<p>
+							"Excellent underwear that fits very well, soft, comfortable and the horizontal fly makes
+							it easier to use than vertical orientation."
+						</p>
+						<strong><span>M.I.</span>Caulfield South, AU</strong>
+					</div>
+				</native-carousel-item>
+				<native-carousel-item hidden="" id="block-static-text-with-icons-static-text-with-icons-2" class="text-with-icons__item">
+					<div class="new-review__item">
+						<img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDEgODAiPiAgICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNDEuNzdWMGg0MS42MDR2NDEuNzdMMjAuMDI2IDgwSC45ODdMMjEuNzIgNDEuNzdIMHptNTkuMzk2IDBWMEgxMDF2NDEuNzdMNzkuNDIyIDgwSDYwLjM4M2wyMC43MzItMzguMjNINTkuMzk2eiIgZmlsbD0iY3VycmVudENvbG9yIiAvPjwvc3ZnPg==">
+						<div class="rating__stars" role="img" aria-label="4.82 out of 5.0 stars"><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg><svg fill="none" focusable="false" width="14" height="14" class="icon icon--rating-star   rating__star rating__star--full" viewBox="0 0 14 13">
+				<path d="M7 0L8.6458 4.73475L13.6574 4.83688L9.66296 7.86525L11.1145 12.6631L7 9.8L2.8855 12.6631L4.33704 7.86525L0.342604 4.83688L5.3542 4.73475L7 0Z" fill="currentColor"></path>
+			  </svg></div>
+						<p>
+							"I bought these undies for my son who suffers with chaffing whilst working and footy
+							training. He no longer suffers chaffing."
+						</p>
+						<strong><span>Jenny R.</span>Brisbane, AU</strong>
+					</div>
+				</native-carousel-item>
+			</div>
+			<page-dots class="text-with-icons__dots dots-nav dots-nav--centered hidden-lap-and-up"><button class="dots-nav__item tap-area" aria-current="true">
+					<span class="visually-hidden">Go to slide 1</span></button><button class="dots-nav__item tap-area">
+					<span class="visually-hidden">Go to slide 2</span></button><button class="dots-nav__item tap-area">
+					<span class="visually-hidden">Go to slide 3</span>
+				</button></page-dots></native-carousel>
+		</div>
+		  </div>
+	</body>
+</html>
