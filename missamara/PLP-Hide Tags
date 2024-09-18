@@ -1,0 +1,3 @@
+.product-link .attribute-badges-section {
+	display: none !important;
+}
