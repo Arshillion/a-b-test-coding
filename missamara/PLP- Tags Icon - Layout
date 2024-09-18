@@ -1,0 +1,109 @@
+const checkSvg = `
+<svg class="tag-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 0C2.25 0 0 2.25 0 5C0 7.75 2.25 10 5 10C7.75 10 10 7.75 10 5C10 2.25 7.75 0 5 0ZM5 9C2.795 9 1 7.205 1 5C1 2.795 2.795 1 5 1C7.205 1 9 2.795 9 5C9 7.205 7.205 9 5 9ZM7.295 2.79L4 6.085L2.705 4.795L2 5.5L4 7.5L8 3.5L7.295 2.79Z" fill="#605F5D"/>
+</svg>
+`;
+
+const style = `
+<style>
+    .tag-icon {
+        width: 12px;
+        height: 12px;
+    }
+    .attribute-badges-section li {
+        padding: 2px 8px 6px 8px!important;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .attribute-badges-section li {
+        background-image: none!important;
+    }
+    .product-link .view-details-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .view-details-wrapper .view-details_cta {
+        border: 1px solid #000000!important;
+        color: #000000!important;
+    }
+    .product-link .view-details-wrapper {
+        box-sizing: border-box;
+        width: 100%!important;
+    }
+    .product-link .view-details-wrapper a{
+        width: 100%!important;
+        box-sizing: border-box;
+    }
+    .product-link .view-details-wrapper .product-card-rating {
+        display: none!important;
+    }
+    .product-link .inner {
+        margin: 0 8px!important;
+        width: calc(100% - 60px)!important;
+    }
+    .product-link .innerer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .product-link .innerer .price {
+        margin-bottom: 6px!important;
+    }
+    .product-link .innerer .price .price.plp-price {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+    .product-link .innerer .price .price.plp-price .ss-current-price {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .product-link .innerer .price * {
+        color: #000000!important;
+        font-weight: bold;
+    }
+    #bc-sf-filter-products .product-block .product-info {
+        padding: 0!important;
+    }
+    .product-link .plp-label-wrapper {
+        margin: 10px!important;
+    }
+    .product-link .product-info {
+        margin-top: 10px!important;
+    }
+</style>
+`;
+
+const styleInterval = setInterval(() => {
+	try {
+		const head = document.querySelector('head');
+		if (head) {
+			head.insertAdjacentHTML('beforeend', style);
+			clearInterval(styleInterval);
+		}
+	} catch (error) {
+		console.error('A/B test style error', error);
+	}
+}, 10);
+
+const interval = setInterval(() => {
+	try {
+		const productLinks = document.querySelectorAll('a.product-link');
+		if (productLinks) {
+			productLinks?.forEach((productLink) => {
+				if (!productLink.querySelector('.tag-icon')) {
+					const tags = productLink.querySelectorAll(
+						'.attribute-badges-section li'
+					);
+					tags.forEach((tag) => {
+						tag.insertAdjacentHTML('afterbegin', checkSvg);
+					});
+				}
+			});
+		}
+	} catch (error) {
+		console.error('A/B test js error', error);
+	}
+}, 10);
