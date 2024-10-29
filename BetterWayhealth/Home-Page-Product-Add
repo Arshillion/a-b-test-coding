@@ -1,0 +1,428 @@
+const VIDEO_WISTIA_ID = 'gvqc3e6ik9';
+
+const video_iframe = `
+<iframe
+	src="https://fast.wistia.net/embed/iframe/${VIDEO_WISTIA_ID}?seo=true&videoFoam=false"
+	msallowfullscreen
+	width="100%"
+	height="100%"
+></iframe>
+`;
+
+const style = `
+<style>
+	@import 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+
+	.product-view-wrapper {
+		background-color: #fff;
+		padding: 40px 0;
+	}
+
+	.product-view-details {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 60px;
+	}
+
+	.product-view-details .product-detail__block--inner {
+		max-width: 32%;
+	}
+    @media only screen and (max-width: 768px) {
+       .product-view-details .product-detail__block--inner {
+        	max-width: 100%;
+       }
+    }
+
+	.product-detail__block--inner {
+		width: 50%;
+	}
+
+	.product-detail__block--inner .slide-area {
+		display: none;
+	}
+
+	.slide-area * {
+		user-select: none;
+	}
+		
+	.slide-area {
+		width: 50%;
+		position: relative;
+	}
+	
+	.slide-area .swiper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.slide-area .swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slide-area .swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.slide-area .swiper {
+		width: 100%;
+		height: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.slide-area .swiper-slide {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.slide-area .mySwiper2 {
+		height: 80%;
+		width: 100%;
+	}
+
+	.slide-area .mySwiper {
+		height: 20%;
+		box-sizing: border-box;
+		padding: 10px 0;
+	}
+
+	.slide-area .mySwiper .swiper-slide {
+		width: 25%;
+		height: 100%;
+		opacity: 0.75;
+	}
+
+	.slide-area .mySwiper .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+
+	.slide-area .swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media (max-width: 991px) {
+		.slide-area {
+			display: none;
+		}
+		.product-detail__block--inner .slide-area {
+			display: block;
+			width: 100%;
+			margin: 12px 0;
+		}
+		.product-view-details {
+			flex-direction: column;
+			gap: 0px;
+		}
+		.product-detail__block--inner {
+			width: 100%;
+		}
+	}
+</style>
+`;
+
+const swiper_area = (size) => `
+<div class="slide-area">
+	<div class="swiper mySwiper2 mySwiper2${size}">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500Front1024x1024.png?v=1711971252"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500PDPinfographics11024x1024.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide h-auto">
+				${video_iframe}
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500PDPinfographics21024x1024.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500CapSpill1024x1024.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/files/BetaGlucan500SuppFacts1024x1024_188b40e3-ed4d-412d-bc83-2f6ee3b3365f.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/files/BetaGlucan500SuggUse1024x1024_a149166a-6d25-4a43-875d-70bd6525679b.png?v=1709304185"
+				/>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+	</div>
+	<div
+		thumbsSlider=""
+		class="swiper mySwiper mySwiper${size}"
+	>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500Front1024x1024.png?v=1711971252"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500PDPinfographics11024x1024.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://www.betterwayhealth.com/_next/image?url=https%3A%2F%2Fembed-ssl.wistia.com%2Fdeliveries%2F7f4c551567e8066ba7992bba209d2718.jpg%3Fimage_crop_resized%3D900x900&w=1024&q=75"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500PDPinfographics21024x1024.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/products/BetaGlucan500CapSpill1024x1024.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/files/BetaGlucan500SuppFacts1024x1024_188b40e3-ed4d-412d-bc83-2f6ee3b3365f.png?v=1709304185"
+				/>
+			</div>
+			<div class="swiper-slide">
+				<img
+					src="https://cdn.shopify.com/s/files/1/1628/0741/files/BetaGlucan500SuggUse1024x1024_a149166a-6d25-4a43-875d-70bd6525679b.png?v=1709304185"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+`;
+
+const product_detail_block = `
+<div class="product-detail__block--inner">
+	<a href="#yotpo-app"
+		><div class="d-flex align-items-center">
+			<div class="ratings">
+				<ul class="d-flex align-items-center">
+					<li>
+						<svg
+							class="desktop"
+							width="25"
+							height="25"
+							viewBox="0 0 49 49"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M47.42 17.3666H29.312L23.7187 0L18.108 17.3666L0 17.349L14.6647 28.0931L9.05402 45.4421L23.7187 34.7157L38.366 45.4421L32.7728 28.0931L47.42 17.3666Z"
+								fill="#2bb0e9"
+							></path>
+							<path
+								d="M34.0314 32.0208L32.7729 28.093L23.7189 34.7156L34.0314 32.0208Z"
+								fill="#2bb0e9"
+							></path>
+						</svg>
+					</li>
+					<li>
+						<svg
+							class="desktop"
+							width="25"
+							height="25"
+							viewBox="0 0 49 49"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M47.42 17.3666H29.312L23.7187 0L18.108 17.3666L0 17.349L14.6647 28.0931L9.05402 45.4421L23.7187 34.7157L38.366 45.4421L32.7728 28.0931L47.42 17.3666Z"
+								fill="#2bb0e9"
+							></path>
+							<path
+								d="M34.0314 32.0208L32.7729 28.093L23.7189 34.7156L34.0314 32.0208Z"
+								fill="#2bb0e9"
+							></path>
+						</svg>
+					</li>
+					<li>
+						<svg
+							class="desktop"
+							width="25"
+							height="25"
+							viewBox="0 0 49 49"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M47.42 17.3666H29.312L23.7187 0L18.108 17.3666L0 17.349L14.6647 28.0931L9.05402 45.4421L23.7187 34.7157L38.366 45.4421L32.7728 28.0931L47.42 17.3666Z"
+								fill="#2bb0e9"
+							></path>
+							<path
+								d="M34.0314 32.0208L32.7729 28.093L23.7189 34.7156L34.0314 32.0208Z"
+								fill="#2bb0e9"
+							></path>
+						</svg>
+					</li>
+					<li>
+						<svg
+							class="desktop"
+							width="25"
+							height="25"
+							viewBox="0 0 49 49"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M47.42 17.3666H29.312L23.7187 0L18.108 17.3666L0 17.349L14.6647 28.0931L9.05402 45.4421L23.7187 34.7157L38.366 45.4421L32.7728 28.0931L47.42 17.3666Z"
+								fill="#2bb0e9"
+							></path>
+							<path
+								d="M34.0314 32.0208L32.7729 28.093L23.7189 34.7156L34.0314 32.0208Z"
+								fill="#2bb0e9"
+							></path>
+						</svg>
+					</li>
+					<li>
+						<svg
+							class="desktop"
+							width="25"
+							height="25"
+							viewBox="0 0 49 49"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M47.42 17.3666H29.312L23.7187 0L18.108 17.3666L0 17.349L14.6647 28.0931L9.05402 45.4421L23.7187 34.7157L38.366 45.4421L32.7728 28.0931L47.42 17.3666Z"
+								fill="#2bb0e9"
+							></path>
+							<path
+								d="M34.0314 32.0208L32.7729 28.093L23.7189 34.7156L34.0314 32.0208Z"
+								fill="#2bb0e9"
+							></path>
+						</svg>
+					</li>
+				</ul>
+			</div>
+			<div class="reviews-block text-secondary">
+				<p class="copy-md font-bold py-0">
+					1142<!-- -->
+					Reviews
+				</p>
+			</div>
+		</div></a
+	>
+	<div class="product-meta">
+		<h1 class="h2">Beta Glucan 500</h1>
+		${swiper_area('Small')}
+		<p class="subhead text-secondary font-light">
+			Our highest dose of Pure Beta Glucan for those who want or need maximum
+			immune support
+		</p>
+		<span class="copy-md">60 capsules | 500mg each</span>
+	</div>
+	<div class="form-wrapper">
+		<div class="add-to-cart-info">Best price, rewards, and continual benefits.</div>
+	</div>
+	<a
+		href="/products/beta-glucan"
+		class="btn btn-lightblue w-100 mt-1 mb-2"
+		>SUBSCRIBE NOW</a
+	>
+	<div class="shipping-block">
+		<p class="copy-sm">60 Day Guarantee</p>
+		<p class="copy-sm">Free US Shipping $75+</p>
+	</div>
+</div>
+`;
+
+const new_elm_html = `
+<div class="product-view-wrapper">
+	<div class="product-view-details container-sm">
+		${swiper_area('Large')}
+		${product_detail_block}
+	</div>
+</div>
+`;
+
+const initializeSwiper = () => {
+	var swiperLarge = new Swiper('.mySwiperLarge', {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	new Swiper('.mySwiper2Large', {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',
+		},
+		thumbs: {
+			swiper: swiperLarge,
+		},
+	});
+
+	var swiperSmall = new Swiper('.mySwiperSmall', {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 3,
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	new Swiper('.mySwiper2Small', {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',
+		},
+		thumbs: {
+			swiper: swiperSmall,
+		},
+	});
+};
+
+const interval = setInterval(() => {
+	try {
+		const head = document.head;
+		if (head) {
+			head.insertAdjacentHTML('beforeend', style);
+			const existElm = document.querySelector('.our-team.bg-light');
+			const newExistElm = document.querySelector('.product-view-wrapper');
+			const script = document.createElement('script');
+			if (existElm && !newExistElm && script) {
+				script.src =
+					'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+				script.async = true;
+				script.onload = () => {
+					initializeSwiper();
+				};
+				document.body.appendChild(script);
+				existElm.insertAdjacentHTML('beforebegin', new_elm_html);
+				clearInterval(interval);
+			}
+		}
+	} catch (error) {
+		console.error('A/B test error', error);
+	}
+}, 10);
