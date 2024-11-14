@@ -1,0 +1,93 @@
+const URL_IMG = [
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/up-to-15-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/Olaplex.png?v=1731556384',
+    newCtaLink: 'https://www.ozhairandbeauty.com/collections/sale?pf_t_brands=Brands_Olaplex&sort=manual&page=1&collection_scope=65162051672',
+    newTitle: '25% off Olaplex',
+  },
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/up-to-20-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/O_M.png?v=1731556384',
+    newCtaLink: '/',
+    newTitle: '20% off O&M',
+  },
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/up-to-25-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/Bondi_Boost.png?v=1731556383',
+    newCtaLink: '/',
+    newTitle: '20-30% off Bondi Boost',
+  },
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/up-to-30-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/Schwarzkopf_Professional.png?v=1731556384',
+    newCtaLink: '/',
+    newTitle: '40% off Schwarzkopf Professional',
+  },
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/up-to-40-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/CPR_Hair.png?v=1731556383',
+    newCtaLink: '/',
+    newTitle: '10% off CPR Hair',
+  },
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/up-to-60-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/Coco_Eve.png?v=1731556383',
+    newCtaLink: '/',
+    newTitle: '20% off Coco & Eve',
+  },
+  {
+    url: 'https://www.ozhairandbeauty.com/collections/over-60-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/Mermade_hair.png?v=1731556384',
+    newCtaLink: '/',
+    newTitle: '20% off Mermade Hair',
+  },
+    {
+    url: 'https://www.ozhairandbeauty.com/collections/over-60-off',
+    image:
+      'https://cdn.shopify.com/s/files/1/0603/9735/5095/files/Sand_Sky.png?v=1731556384',
+    newCtaLink: '/',
+    newTitle: '30% off Sand & Sky',
+  },
+];
+
+const imgInterval = setInterval(() => {
+  try {
+    const items = document.querySelectorAll(
+      '.swiper.swiper-free-mode .swiper-wrapper a',
+    );
+    if (items.length) {
+      const urlMap = new Map(URL_IMG.map((url) => [url.url, url]));
+      items.forEach((item) => {
+        if (!item.classList.contains('changed-elm')) {
+          item.classList.add('changed-elm');
+          const find = urlMap.get(item.href);
+          const image = item.querySelector('img');
+          const paragraph = item.closest('.swiper-slide').querySelector('p');
+
+          if (find && image) {
+            image.onclick = (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              window.open(find.newCtaLink, '_self');
+            };
+
+            image.src = image.srcset = find.image;
+            item.href = find.newCtaLink;
+            if (paragraph) paragraph.textContent = find.newTitle;
+          }
+        }
+      });
+      clearInterval(imgInterval);
+    }
+  } catch (error) {
+    console.error('Error in image interval:', error);
+    clearInterval(imgInterval);
+  }
+}, 1000);
