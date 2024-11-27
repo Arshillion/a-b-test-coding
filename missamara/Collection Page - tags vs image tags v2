@@ -1,0 +1,90 @@
+const style = `
+<style>
+    .attribute-badges-section {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 111;
+        width: 100%;
+        margin: 4px;
+    }
+    .attribute-badges-section ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 2px;
+    }    
+    .attribute-badges-section ul li {
+        width: max-content;
+        font-size: 12px;
+        margin: 0;
+    }
+    .new_tag_img {
+        display: block !important;
+        position: static !important;
+        text-align: left !important;
+        padding: 15px 15px 6px !important;
+    }
+    .product-info .inner {
+        width: 100%!important;
+    }
+    .product-info {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .attribute-badges-section ul li {
+        font-size: 10px!important;
+        height: 22px!important;
+    }
+    .swiper-wrapper .ss__swiper__image{
+        height: 100% !important;
+    }
+    @media (min-width: 768px) {
+        .product-block.detail-mode-permanent.main-image-loaded .block-inner {
+            min-height: 500px !important;
+        }
+        .attribute-badges-section ul {
+            padding: 6px;
+        } 
+    }
+</style>
+`;
+
+const styleInterval = setInterval(() => {
+	try {
+		const head = document.querySelector('head');
+		if (head) {
+			head.insertAdjacentHTML('beforeend', style);
+			clearInterval(styleInterval);
+		}
+	} catch (error) {
+		console.error('A/B test style error', error);
+	}
+}, 10);
+
+const interval = setInterval(() => {
+	try {
+		const productList = document.querySelectorAll('a.product-link');
+		if (productList.length > 0) {
+			productList.forEach((product) => {
+				if (!product.classList.contains('new-product_link')) {
+					product.classList.add('new-product_link');
+					const existElm = product.querySelector('.attribute-badges-section');
+					const existElm2 = product.querySelector('.image-label-wrap');
+					const existElm3 = product.querySelector('.product-info');
+					const existElm4 = product.querySelector('.tag_imag');
+					if (existElm && existElm2) {
+						existElm2.insertAdjacentElement('beforeend', existElm);
+					}
+					if (existElm4 && existElm3) {
+						existElm4.classList.add('new_tag_img');
+						existElm3.insertAdjacentElement('beforebegin', existElm4);
+					}
+				}
+			});
+		}
+	} catch (error) {
+		console.error('A/B test error', error);
+	}
+}, 10);
