@@ -1,0 +1,94 @@
+const btnTxt= [
+	{
+		text: '🌙 Sleep Deeper, Wake Up Refreshed',
+	},
+	{
+		text: '🔥 Natural Pain & Inflammation Relief',
+	},
+	{
+		text: '☁️ Effortless Comfort – Ultra-Thin & Easy to Us',
+	},
+	{
+		text: '🔒 Trusted by 35,000+ Sleepers',
+	},
+];
+const style = `
+<style>
+    .emoji-benefits-container {
+        display: none;
+    }
+    .color-text {
+        grid-auto-flow: row;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5px;
+        /* width: max-content; */
+    }
+    .btnText {
+        border-radius: 8px;
+        border: 1px solid #3a574366;
+        background: var(--White, #FFF);
+        display: flex;
+        /*width: max-content;*/
+        width: fit-content;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: black;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        line-height: normal;
+        width: auto;
+    }
+    .why {
+        font-weight: 700;
+    }
+    @media only screen and (max-width: 768px) {
+        .color-text {
+            grid-template-columns: auto auto;
+        }
+        .btnText {
+            font-size: 10px;
+        }
+    }
+</style>
+`;
+
+const new_elm_html=`
+<div class="color-text">
+    ${btnTxt.map((review) =>`
+        <div class="btnText">
+            ${review.text}
+        </div>`
+    ).join('')}
+</div>
+`;
+
+const styleInterval = setInterval(() => {
+	try {
+		const head = document.querySelector('head');
+		if (head) {
+			head.insertAdjacentHTML('beforeend', style);
+			clearInterval(styleInterval);
+		}
+	} catch (error) {
+		console.error('A/B test style error', error);
+	}
+}, 10);
+
+const interval = setInterval(() => {
+	try {
+		const exist_elm = document.querySelector('.price.price--large.price--show-badge');
+        const afterPay=document.querySelectorAll('.shopify-block.shopify-app-block')[1];
+        const afterPayTarget=document.querySelector('.price.price--large.price--on-sale.price--show-badge');
+		if (exist_elm && !document.querySelector('.color-text')) {
+			exist_elm.insertAdjacentHTML('afterend', new_elm_html);
+			afterPayTarget.insertAdjacentElement('afterend', afterPay);
+			clearInterval(interval);
+		}
+	} catch (error) {
+		console.error('A/B test js error', error);
+	}
+}, 10);
