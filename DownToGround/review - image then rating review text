@@ -1,0 +1,367 @@
+const reviews = [
+	{
+		image: 'https://downtoground.co/cdn/shop/files/DSC00518R.webp',
+		rating: 5,
+		content:
+			'The print is absolutely gorgeous and the carrier itself is so comfortable and supportive. My baby loves this carrier and always falls asleep in it. I would definitely recommend!',
+		author: 'John Doe',
+		verified: true,
+	},
+	{
+		image:
+			'https://downtoground.co/cdn/shop/files/grounding_mattress_pads.webp',
+		rating: 4,
+		content:
+			'The print is absolutely gorgeous and the carrier itself is so comfortable and supportive. My baby loves this carrier and always falls asleep in it. I would definitely recommend!',
+		author: 'Maikha L.',
+		verified: false,
+	},
+	{
+		image: 'https://downtoground.co/cdn/shop/files/DSC00518R.webp',
+		rating: 5,
+		content:
+			'The print is absolutely gorgeous and the carrier itself is so comfortable and supportive. My baby loves this carrier and always falls asleep in it. I would definitely recommend!',
+		author: 'John Doe',
+		verified: true,
+	},
+	{
+		image:
+			'https://downtoground.co/cdn/shop/files/grounding_mattress_pads.webp',
+		rating: 4,
+		content:
+			'The print is absolutely gorgeous and the carrier itself is so comfortable and supportive. My baby loves this carrier and always falls asleep in it. I would definitely recommend!',
+		author: 'Maikha L.',
+		verified: false,
+	},
+	{
+		image: 'https://downtoground.co/cdn/shop/files/DSC00518R.webp',
+		rating: 5,
+		content:
+			'The print is absolutely gorgeous and the carrier itself is so comfortable and supportive. My baby loves this carrier and always falls asleep in it. I would definitely recommend!',
+		author: 'John Doe',
+		verified: true,
+	},
+	{
+		image:
+			'https://downtoground.co/cdn/shop/files/grounding_mattress_pads.webp',
+		rating: 4,
+		content:
+			'The print is absolutely gorgeous and the carrier itself is so comfortable and supportive. My baby loves this carrier and always falls asleep in it. I would definitely recommend!',
+		author: 'Maikha L.',
+		verified: false,
+	},
+];
+
+const ratingSvg = `
+<svg width="81" height="16" viewBox="0 0 81 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.0756 2.12344C7.21646 1.68991 7.8298 1.68991 7.97066 2.12344L9.08055 5.53934C9.14355 5.73322 9.32422 5.86449 9.52808 5.86449H13.1198C13.5756 5.86449 13.7651 6.4478 13.3964 6.71573L10.4906 8.82687C10.3257 8.9467 10.2567 9.15909 10.3197 9.35297L11.4296 12.7689C11.5704 13.2024 11.0742 13.5629 10.7055 13.295L7.79972 11.1838C7.63479 11.064 7.41147 11.064 7.24654 11.1838L4.34081 13.295C3.97203 13.5629 3.47583 13.2024 3.61669 12.7689L4.72659 9.35298C4.78958 9.15909 4.72057 8.9467 4.55564 8.82687L1.64991 6.71574C1.28113 6.4478 1.47066 5.86449 1.9265 5.86449H5.51818C5.72204 5.86449 5.90272 5.73322 5.96571 5.53934L7.0756 2.12344Z" fill="#F0A207"/>
+<path d="M39.6681 2.12344C39.809 1.68991 40.4223 1.68991 40.5631 2.12344L41.673 5.53934C41.736 5.73322 41.9167 5.86449 42.1206 5.86449H45.7123C46.1681 5.86449 46.3576 6.4478 45.9888 6.71573L43.0831 8.82687C42.9182 8.9467 42.8492 9.15909 42.9122 9.35297L44.0221 12.7689C44.1629 13.2024 43.6667 13.5629 43.2979 13.295L40.3922 11.1838C40.2273 11.064 40.004 11.064 39.839 11.1838L36.9333 13.295C36.5645 13.5629 36.0683 13.2024 36.2092 12.7689L37.3191 9.35298C37.3821 9.15909 37.3131 8.9467 37.1481 8.82687L34.2424 6.71574C33.8736 6.4478 34.0631 5.86449 34.519 5.86449H38.1107C38.3145 5.86449 38.4952 5.73322 38.5582 5.53934L39.6681 2.12344Z" fill="#F0A207"/>
+<path d="M23.372 2.12344C23.5128 1.68991 24.1262 1.68991 24.267 2.12344L25.3769 5.53934C25.4399 5.73322 25.6206 5.86449 25.8244 5.86449H29.4161C29.872 5.86449 30.0615 6.4478 29.6927 6.71573L26.787 8.82687C26.6221 8.9467 26.5531 9.15909 26.616 9.35297L27.7259 12.7689C27.8668 13.2024 27.3706 13.5629 27.0018 13.295L24.0961 11.1838C23.9312 11.064 23.7078 11.064 23.5429 11.1838L20.6372 13.295C20.2684 13.5629 19.7722 13.2024 19.9131 12.7689L21.023 9.35298C21.086 9.15909 21.0169 8.9467 20.852 8.82687L17.9463 6.71574C17.5775 6.4478 17.767 5.86449 18.2229 5.86449H21.8146C22.0184 5.86449 22.1991 5.73322 22.2621 5.53934L23.372 2.12344Z" fill="#F0A207"/>
+<path d="M55.9645 2.12344C56.1053 1.68991 56.7187 1.68991 56.8595 2.12344L57.9694 5.53934C58.0324 5.73322 58.2131 5.86449 58.4169 5.86449H62.0086C62.4645 5.86449 62.654 6.4478 62.2852 6.71573L59.3795 8.82687C59.2146 8.9467 59.1455 9.15909 59.2085 9.35297L60.3184 12.7689C60.4593 13.2024 59.9631 13.5629 59.5943 13.295L56.6886 11.1838C56.5237 11.064 56.3003 11.064 56.1354 11.1838L53.2297 13.295C52.8609 13.5629 52.3647 13.2024 52.5056 12.7689L53.6154 9.35298C53.6784 9.15909 53.6094 8.9467 53.4445 8.82687L50.5388 6.71574C50.17 6.4478 50.3595 5.86449 50.8154 5.86449H54.407C54.6109 5.86449 54.7916 5.73322 54.8546 5.53934L55.9645 2.12344Z" fill="#F0A207"/>
+<path d="M72.2608 2.12344C72.4017 1.68991 73.015 1.68991 73.1559 2.12344L74.2658 5.53934C74.3288 5.73322 74.5095 5.86449 74.7133 5.86449H78.305C78.7608 5.86449 78.9504 6.4478 78.5816 6.71573L75.6759 8.82687C75.5109 8.9467 75.4419 9.15909 75.5049 9.35297L76.6148 12.7689C76.7557 13.2024 76.2595 13.5629 75.8907 13.295L72.985 11.1838C72.82 11.064 72.5967 11.064 72.4318 11.1838L69.526 13.295C69.1573 13.5629 68.6611 13.2024 68.8019 12.7689L69.9118 9.35298C69.9748 9.15909 69.9058 8.9467 69.7409 8.82687L66.8351 6.71574C66.4664 6.4478 66.6559 5.86449 67.1117 5.86449H70.7034C70.9073 5.86449 71.0879 5.73322 71.1509 5.53934L72.2608 2.12344Z" fill="#F0A207"/>
+</svg>
+`;
+
+const verifiedCheck = `
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="7.24223" cy="7.49821" r="6.78727" fill="#3A8A53"/>
+<path d="M3.58755 7.20695L6.19804 10.1077L10.8969 4.88672" stroke="white" stroke-width="1.0442"/>
+</svg>
+`;
+
+const leftArrow = `
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+`;
+
+const rightArrow = `
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+`;
+
+const style = `
+<style>
+    .product-reviews-area * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-reviews-area {
+        background: #EBEDEC;
+        border-top: 1px solid #0000000A;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 16px 20px; 
+        gap: 20px;
+        position: relative;
+    }
+
+    .product-reviews-title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #27342B;
+        font-family: var(--font-body-family);     
+    }
+
+    .product-reviews-wrapper {
+        width: 100%;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .product-reviews-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-reviews-items {
+        display: flex;
+        width: max-content;
+        gap: 8px;
+    }
+
+    .product-reviews-item {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: 0px 0px 10px 0px #0000001F;
+        border: 1px solid #A6B7AB61;
+        border-radius: 8px;
+        padding: 12px;
+        background: #FFFFFF;
+        max-width: 260px;
+    }
+        
+    .product-reviews-item-image {
+        width: 100%;
+        height: 200px;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+    .product-reviews-item-rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .product-reviews-item-rating svg {
+        flex-shrink: 0;
+    }
+
+    .product-reviews-item-rating strong {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0;
+        color: #1A7938;
+    }
+
+    .product-reviews-item-content {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0;
+        color:#323232;
+    }
+
+    .product-reviews-item-author {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .product-reviews-item-author-name {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: 0;
+        color:#3E3E41;
+    }
+
+    .product-reviews-item-verified {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .product-reviews-item-verified svg {
+        flex-shrink: 0;
+    }
+
+    .product-reviews-item-verified strong {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14.62px;
+        letter-spacing: 6%;
+        color: #21743B;
+    }
+
+    .product-reviews-arrow-left,
+    .product-reviews-arrow-right {
+        background: white;
+        border-radius: 100%;
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        box-shadow: 0px 0px 10px 0px #0000001F;
+        border: 1px solid #A6B7AB61;
+    }
+
+    .product-reviews-arrow-left {
+        position: absolute;
+        left: 6px;
+        top: 50%;
+    }
+
+    .product-reviews-arrow-right {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+    }
+
+    @media (max-width: 749px) {
+        .product-reviews-arrow-left,
+        .product-reviews-arrow-right {
+            display: none;
+        }
+        .product-reviews-area {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .product-reviews-area::before {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #EBEDEC;
+        }
+        .product-reviews-area::after {
+            content: '';
+            position: absolute;
+            left: 100%;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #EBEDEC;
+        }
+    }
+</style>
+`;
+
+const review_img_html = (review) => `
+<img class="product-reviews-item-image" src="${review.image}" alt="${review.author}">
+`;
+
+const rating_svg_html = (rating) => `
+<div class="product-reviews-item-rating">
+    ${ratingSvg}
+    <strong>${rating}/5</strong>
+</div>
+`;
+
+const review_content_html = (review) => `
+<p class="product-reviews-item-content">${review.content}</p>
+`;
+
+const verified_customer_html = `
+<div class="product-reviews-item-verified">
+    <strong>Verified Customer</strong>
+    ${verifiedCheck}
+</div>
+`;
+
+const author_html = (review) => `
+<div class="product-reviews-item-author">
+    <span class="product-reviews-item-author-name">${review.author}</span>
+    ${review.verified ? verified_customer_html : ''}
+</div>
+`;
+
+const review_item_html = (review) => `
+<div class="product-reviews-item">
+    ${review_img_html(review)}
+    ${rating_svg_html(review.rating)}
+    ${review_content_html(review)}
+    ${author_html(review)}
+</div>
+`;
+
+const product_reviews_html = `
+<div class="product-reviews-area">
+    <h2 class="product-reviews-title">
+        MOST HELPFUL REVIEWS
+    </h2>
+    <div class="product-reviews-wrapper">
+        <div class="product-reviews-items">
+            ${reviews.map(review_item_html).join('')}
+        </div>
+    </div>
+    <button class="product-reviews-arrow-left">
+        ${leftArrow}
+    </button>
+    <button class="product-reviews-arrow-right">
+        ${rightArrow}
+    </button>
+</div>
+`;
+
+const styleInterval = setInterval(() => {
+	try {
+		const head = document.querySelector('head');
+		if (head) {
+			head.insertAdjacentHTML('beforeend', style);
+			clearInterval(styleInterval);
+		}
+	} catch (error) {
+		console.error('A/B test style error', error);
+	}
+}, 10);
+
+const interval = setInterval(() => {
+	try {
+		const payment_badges_block = document.querySelector(
+			'.payment-badges-block'
+		);
+		if (
+			payment_badges_block &&
+			!document.querySelector('.product-reviews-wrapper')
+		) {
+			payment_badges_block.insertAdjacentHTML('afterend', product_reviews_html);
+			clearInterval(interval);
+		}
+	} catch (error) {
+		console.error('A/B test js error', error);
+	}
+}, 10);
+
+const buttonClickInterval = setInterval(() => {
+	try {
+		const leftArrow = document.querySelector('.product-reviews-arrow-left');
+		const rightArrow = document.querySelector('.product-reviews-arrow-right');
+		const reviewsWrapper = document.querySelector('.product-reviews-wrapper');
+		if (leftArrow && rightArrow && reviewsWrapper) {
+			leftArrow.addEventListener('click', () => {
+				reviewsWrapper.scrollTo({
+					left: reviewsWrapper.scrollLeft - 260,
+					behavior: 'smooth',
+				});
+			});
+			rightArrow.addEventListener('click', () => {
+				reviewsWrapper.scrollTo({
+					left: reviewsWrapper.scrollLeft + 260,
+					behavior: 'smooth',
+				});
+			});
+		}
+	} catch (error) {
+		console.error('A/B test button click error', error);
+	}
+}, 10);
